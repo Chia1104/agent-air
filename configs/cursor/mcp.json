@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "Better Auth": {
+      "headers": {},
+      "url": "https://mcp.better-auth.com/mcp"
+    },
+    "codebase-memory-mcp": {
+      "command": "~/.local/bin/codebase-memory-mcp"
+    },
+    "github": {
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_TOKEN}"
+      },
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
+    "heroui-native": {
+      "args": [],
+      "command": "bunx -y @heroui/native-mcp@latest",
+      "env": {}
+    },
+    "heroui-native-pro": {
+      "headers": {
+        "x-heroui-personal-token": "${HEROUI_NATIVE_PRO_HEROUI_PERSONAL_TOKEN}"
+      },
+      "url": "https://native-mcp.heroui.pro/mcp"
+    },
+    "heroui-pro": {
+      "headers": {
+        "x-heroui-personal-token": "${HEROUI_PRO_HEROUI_PERSONAL_TOKEN}"
+      },
+      "url": "https://mcp.heroui.pro/mcp"
+    },
+    "heroui-react": {
+      "args": [],
+      "command": "bunx -y @heroui/react-mcp@latest",
+      "env": {}
+    },
+    "railway": {
+      "url": "https://mcp.railway.com"
+    }
+  }
+}

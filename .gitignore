@@ -1,0 +1,41 @@
+# Local secrets and machine-specific overrides
+.env
+.env.*
+!.env.example
+private/
+secrets/
+*.local
+*.local.*
+
+# OAuth/token stores and credentials
+**/auth.json
+**/auth.db*
+**/*credentials*.json
+**/oauth_creds.json
+**/mcp-tokens/
+**/mcp-oauth-locks/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Runtime state and generated data
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+*.log
+*.sqlite*
+*.db*
+**/sessions/
+**/cache/
+**/logs/
+**/history.jsonl
+**/state/
+**/tmp/
+**/.hub/
+**/.curator_backups/
+
+# Backups created by the installer
+*.agent-air.bak

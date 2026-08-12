@@ -1,0 +1,69 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "better-auth": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.better-auth.com/mcp"
+    },
+    "codebase-memory-mcp": {
+      "command": [
+        "~/.local/bin/codebase-memory-mcp"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "figma-desktop": {
+      "enabled": true,
+      "type": "remote",
+      "url": "http://127.0.0.1:3845/mcp"
+    },
+    "github": {
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer ${GITHUB_TOKEN}"
+      },
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/"
+    },
+    "heroui-native": {
+      "command": [
+        "bunx",
+        "-y",
+        "@heroui/native-mcp@latest"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "heroui-native-pro": {
+      "enabled": true,
+      "headers": {
+        "x-heroui-personal-token": "${HEROUI_NATIVE_PRO_HEROUI_PERSONAL_TOKEN}"
+      },
+      "type": "remote",
+      "url": "https://native-mcp.heroui.pro/mcp"
+    },
+    "heroui-pro": {
+      "enabled": true,
+      "headers": {
+        "x-heroui-personal-token": "${HEROUI_PRO_HEROUI_PERSONAL_TOKEN}"
+      },
+      "type": "remote",
+      "url": "https://mcp.heroui.pro/mcp"
+    },
+    "heroui-react": {
+      "command": [
+        "bunx",
+        "-y",
+        "@heroui/react-mcp@latest"
+      ],
+      "enabled": true,
+      "type": "local"
+    },
+    "railway": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.railway.com"
+    }
+  }
+}

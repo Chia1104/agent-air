@@ -1,0 +1,18 @@
+repos:
+  - repo: local
+    hooks:
+      - id: agent-air-secret-scan
+        name: Agent Air secret scan
+        entry: python3 scripts/check-secrets.py
+        language: system
+        pass_filenames: false
+      - id: agent-air-python-compile
+        name: Compile Agent Air scripts
+        entry: python3 -m py_compile scripts/check-secrets.py scripts/install.py scripts/snapshot.py
+        language: system
+        pass_filenames: false
+      - id: agent-air-tests
+        name: Test Agent Air sync scripts
+        entry: python3 -m unittest discover -s tests -p test_*.py -v
+        language: system
+        pass_filenames: false

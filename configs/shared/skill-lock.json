@@ -1,0 +1,213 @@
+{
+  "version": 3,
+  "skills": {
+    "turborepo": {
+      "source": "vercel/turborepo",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel/turborepo.git",
+      "skillPath": "skills/turborepo/SKILL.md",
+      "skillFolderHash": "439f586b421147775c7cc707b57a6141684fcbef",
+      "installedAt": "2026-01-23T08:11:04.624Z",
+      "updatedAt": "2026-08-08T16:18:59.283Z"
+    },
+    "frontend-testing": {
+      "source": "langgenius/dify",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/langgenius/dify.git",
+      "skillPath": ".agents/skills/frontend-testing/SKILL.md",
+      "skillFolderHash": "79e06a0a285ed1fd93b77c9dc55c8dcc36e6c4c5",
+      "installedAt": "2026-01-24T11:35:31.622Z",
+      "updatedAt": "2026-08-01T19:39:47.133Z"
+    },
+    "threejs-shaders": {
+      "source": "cloudai-x/threejs-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cloudai-x/threejs-skills.git",
+      "skillPath": "skills/threejs-shaders/SKILL.md",
+      "skillFolderHash": "5b8907aa3a6497db9281a6a6b4f76437ad78faee",
+      "installedAt": "2026-01-24T22:57:43.079Z",
+      "updatedAt": "2026-01-25T10:39:52.565Z"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "skillFolderHash": "343db72180d05814949fef7d46be96b5c6ee86b3",
+      "installedAt": "2026-01-25T10:01:14.776Z",
+      "updatedAt": "2026-08-01T19:39:48.927Z"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-skills.git",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "skillFolderHash": "3116f3e62dbd02b44a598b1aa690d2a8938e8f89",
+      "installedAt": "2026-01-25T10:35:15.497Z",
+      "updatedAt": "2026-01-25T10:35:15.497Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "0d5b74a14bdf3ebcd64f352d06376a2ef05ed296",
+      "installedAt": "2026-01-25T10:35:38.947Z",
+      "updatedAt": "2026-08-01T19:39:51.506Z"
+    },
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
+      "skillPath": "skills/agent-browser/SKILL.md",
+      "skillFolderHash": "037e8078db4b20b4aa25c04f21c6de7d335ec449",
+      "installedAt": "2026-01-25T10:35:59.616Z",
+      "updatedAt": "2026-08-01T19:39:53.024Z"
+    },
+    "better-auth-best-practices": {
+      "source": "better-auth/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/better-auth/skills.git",
+      "skillPath": "better-auth/best-practices/SKILL.md",
+      "skillFolderHash": "2ab82b0b744f426903e321f4abcf0440c6e201ca",
+      "installedAt": "2026-01-25T10:36:25.898Z",
+      "updatedAt": "2026-08-01T19:39:54.959Z"
+    },
+    "heroui-react": {
+      "source": "heroui-inc/heroui",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/heroui-inc/heroui.git",
+      "skillPath": "skills/heroui-react/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-26T20:18:58.262Z",
+      "updatedAt": "2026-01-28T12:59:18.900Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-01-26T20:19:09.498Z",
+      "updatedAt": "2026-08-01T19:39:57.019Z"
+    },
+    "zustand": {
+      "source": "lobehub/lobe-chat",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/lobehub/lobe-chat.git",
+      "skillPath": ".agents/skills/zustand/SKILL.md",
+      "skillFolderHash": "0c33dc29f09a63994592fe5b4105b1fd1f971580",
+      "installedAt": "2026-01-28T08:36:28.414Z",
+      "updatedAt": "2026-08-08T16:19:11.632Z"
+    },
+    "heroui-native": {
+      "source": "heroui-inc/heroui",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/heroui-inc/heroui.git",
+      "skillPath": "skills/heroui-native/SKILL.md",
+      "skillFolderHash": "",
+      "installedAt": "2026-01-28T12:59:19.096Z",
+      "updatedAt": "2026-01-28T12:59:19.096Z"
+    },
+    "vitest": {
+      "source": "antfu/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/antfu/skills.git",
+      "skillPath": "skills/vitest/SKILL.md",
+      "skillFolderHash": "6e59e3b95305499c21fc401b3dbddedbb8ead8a6",
+      "installedAt": "2026-01-31T13:02:49.643Z",
+      "updatedAt": "2026-08-01T19:39:59.862Z"
+    },
+    "typescript": {
+      "source": "lobehub/lobehub",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/lobehub/lobehub.git",
+      "skillPath": ".agents/skills/typescript/SKILL.md",
+      "skillFolderHash": "995342808d584bcb64eecc875c2603167e4839d6",
+      "installedAt": "2026-02-11T02:27:39.167Z",
+      "updatedAt": "2026-08-01T19:40:12.366Z"
+    },
+    "npm-deps-cleanup": {
+      "source": "anthonyshew/dotfiles",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthonyshew/dotfiles.git",
+      "skillPath": "skills/npm-deps-cleanup/SKILL.md",
+      "skillFolderHash": "61573cb812cf4031f981a84dc56d9b3885191d64",
+      "installedAt": "2026-05-05T19:09:58.477Z",
+      "updatedAt": "2026-08-01T19:40:15.809Z"
+    },
+    "design-md": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "plugins/stitch-utilities/skills/design-md/SKILL.md",
+      "skillFolderHash": "0a84781f35accede7cf373a4129d93bfb7651930",
+      "installedAt": "2026-07-13T09:10:27.161Z",
+      "updatedAt": "2026-07-13T09:10:27.161Z"
+    },
+    "use-railway": {
+      "source": "railwayapp/railway-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/railwayapp/railway-skills.git",
+      "skillPath": "plugins/railway/skills/use-railway/SKILL.md",
+      "skillFolderHash": "bb3efd4b3dc2f5e1c23782d0ecc6bac0280800ca",
+      "installedAt": "2026-07-13T13:26:30.565Z",
+      "updatedAt": "2026-08-08T16:19:14.051Z"
+    },
+    "workflow": {
+      "source": "vercel/workflow",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel/workflow.git",
+      "skillPath": "skills/workflow/SKILL.md",
+      "skillFolderHash": "fd04f147f83ffc9a8c193d6d6699d7a1aa1d6575",
+      "installedAt": "2026-07-14T07:15:16.583Z",
+      "updatedAt": "2026-07-14T07:15:16.583Z"
+    },
+    "security-audit": {
+      "source": "cloudflare/security-audit-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cloudflare/security-audit-skill.git",
+      "skillPath": "skills/security-audit/SKILL.md",
+      "skillFolderHash": "bf8273f4614739db4c8535a5ab43f3a471b974b8",
+      "installedAt": "2026-07-21T06:33:13.599Z",
+      "updatedAt": "2026-07-21T06:33:13.599Z"
+    },
+    "i-have-adhd": {
+      "source": "ayghri/i-have-adhd",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ayghri/i-have-adhd.git",
+      "skillPath": "skills/i-have-adhd/SKILL.md",
+      "skillFolderHash": "2c4c2b7fd5b0f9a4071a780a536e63816e0e8694",
+      "installedAt": "2026-07-21T10:14:45.891Z",
+      "updatedAt": "2026-08-08T16:19:15.828Z"
+    },
+    "no-ai-slop": {
+      "source": "petergyang/no-ai-slop",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/petergyang/no-ai-slop.git",
+      "skillPath": "skills/no-ai-slop/SKILL.md",
+      "skillFolderHash": "ff5d481dea0e60cea3738f81ca737ad54328b267",
+      "installedAt": "2026-08-08T16:17:48.447Z",
+      "updatedAt": "2026-08-08T16:17:48.447Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "antigravity-cli",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed",
+    "claude-code"
+  ]
+}
