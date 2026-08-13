@@ -4,9 +4,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/codex-hook.sh' ] && [ -r '~/.orca/agent-hooks/codex-hook.sh' ] && [ -x '~/.orca/agent-hooks/codex-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/codex-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       }
@@ -15,9 +15,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/codex-hook.sh' ] && [ -r '~/.orca/agent-hooks/codex-hook.sh' ] && [ -x '~/.orca/agent-hooks/codex-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/codex-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       }
@@ -26,9 +26,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/codex-hook.sh' ] && [ -r '~/.orca/agent-hooks/codex-hook.sh' ] && [ -x '~/.orca/agent-hooks/codex-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/codex-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       }
@@ -37,9 +37,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/codex-hook.sh' ] && [ -r '~/.orca/agent-hooks/codex-hook.sh' ] && [ -x '~/.orca/agent-hooks/codex-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/codex-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       },
@@ -57,9 +57,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/codex-hook.sh' ] && [ -r '~/.orca/agent-hooks/codex-hook.sh' ] && [ -x '~/.orca/agent-hooks/codex-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/codex-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       },
@@ -77,9 +77,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/codex-hook.sh' ] && [ -r '~/.orca/agent-hooks/codex-hook.sh' ] && [ -x '~/.orca/agent-hooks/codex-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/codex-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       }
@@ -88,9 +88,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/codex-hook.sh' ] && [ -r '~/.orca/agent-hooks/codex-hook.sh' ] && [ -x '~/.orca/agent-hooks/codex-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/codex-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       }
@@ -99,9 +99,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/codex-hook.sh' ] && [ -r '~/.orca/agent-hooks/codex-hook.sh' ] && [ -x '~/.orca/agent-hooks/codex-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/codex-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       },

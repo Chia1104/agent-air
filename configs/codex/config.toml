@@ -20,9 +20,14 @@ matcher = "startup|resume|clear|compact"
 command = 'echo "Code discovery: prefer codebase-memory-mcp (search_graph, trace_path, get_code_snippet, query_graph, search_code) over grep/file-read; run index_repository first if the project is not indexed."'
 type = "command"
 
+[hooks.state]
+
 [hooks.state."~/.codex/config.toml:session_start:0:0"]
 enabled = true
 trusted_hash = "sha256:ed997f3f9766959ba56dc2243cd02468d6eadad80d92b7f5a650e6fc0fb0c050"
+
+[hooks.state."~/.codex/hooks.json:pre_tool_use:0:0"]
+trusted_hash = "sha256:6e341b344479bce507e4b8d67bb772568343cf4adbcd4f61e5aeb6b2bbbe5643"
 
 [hooks.state."~/.codex/hooks.json:permission_request:0:0"]
 trusted_hash = "sha256:cf61cb77eaba9edf848a450ad637c33a500478b097a9c7d794b7178997b2f306"
@@ -30,14 +35,11 @@ trusted_hash = "sha256:cf61cb77eaba9edf848a450ad637c33a500478b097a9c7d794b717899
 [hooks.state."~/.codex/hooks.json:post_tool_use:0:0"]
 trusted_hash = "sha256:753fcaf858344ac6ca925b8c6876d92afeb23146b6407f3be39f1bcc063ffefc"
 
-[hooks.state."~/.codex/hooks.json:pre_tool_use:0:0"]
-trusted_hash = "sha256:6e341b344479bce507e4b8d67bb772568343cf4adbcd4f61e5aeb6b2bbbe5643"
-
 [hooks.state."~/.codex/hooks.json:session_start:0:0"]
 trusted_hash = "sha256:d0510e64182ec82e2c6503d56a12eaf638aed8e91d8c423a9628969ef56183d1"
 
-[hooks.state."~/.codex/hooks.json:stop:0:0"]
-trusted_hash = "sha256:747380d269f1a63d15f9039ae22f741ae4891f017eb7e9c455533bf51c2e538d"
+[hooks.state."~/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:3381b1202255afdc0672643c36e80af9d9bdb7258b3200008fa9f8251b65fb2e"
 
 [hooks.state."~/.codex/hooks.json:subagent_start:0:0"]
 trusted_hash = "sha256:03f70de4f44016be89dc399326f1aa12e85265ffd151e7fa7eb5c1ba936afa16"
@@ -45,8 +47,8 @@ trusted_hash = "sha256:03f70de4f44016be89dc399326f1aa12e85265ffd151e7fa7eb5c1ba9
 [hooks.state."~/.codex/hooks.json:subagent_stop:0:0"]
 trusted_hash = "sha256:f72c783951c743dfc400363caaada3f0a1afca825cd7686da13e9cefbb2afb36"
 
-[hooks.state."~/.codex/hooks.json:user_prompt_submit:0:0"]
-trusted_hash = "sha256:3381b1202255afdc0672643c36e80af9d9bdb7258b3200008fa9f8251b65fb2e"
+[hooks.state."~/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:747380d269f1a63d15f9039ae22f741ae4891f017eb7e9c455533bf51c2e538d"
 
 [marketplaces.openai-bundled]
 last_updated = "2026-08-03T11:51:09Z"

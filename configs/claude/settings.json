@@ -38,27 +38,17 @@
     ],
     "PermissionRequest": [
       {
+        "matcher": "*",
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
-        ],
-        "matcher": "*"
+        ]
       }
     ],
     "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
-          }
-        ],
-        "matcher": "*"
-      },
       {
         "hooks": [
           {
@@ -68,18 +58,28 @@
           }
         ],
         "matcher": ""
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
+            "timeout": 10
+          }
+        ]
       }
     ],
     "PostToolUseFailure": [
       {
+        "matcher": "*",
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
-        ],
-        "matcher": "*"
+        ]
       }
     ],
     "PreCompact": [
@@ -107,16 +107,6 @@
       {
         "hooks": [
           {
-            "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
-          }
-        ],
-        "matcher": "*"
-      },
-      {
-        "hooks": [
-          {
             "command": "[ -n \"${SUPACODE_SURFACE_ID:-}\" ] && { __ppid=$(ps -o ppid= -p $$ 2>/dev/null | tr -d '[:space:]'); __tty=$(ps -o tty= -p \"$__ppid\" 2>/dev/null | tr -d '[:space:]'); case \"$__tty\" in *[0-9]*) __tty=\"/dev/${__tty#/dev/}\";; *) __tty=\"/dev/tty\";; esac; __sp=\"\"; [ -n \"${SUPACODE_SOCKET_PATH:-}\" ] && [ -n \"$__ppid\" ] && __sp=\";pid=$__ppid\"; printf '\\033]3008;start=claude;event=busy%s\\033\\\\' \"$__sp\" > \"$__tty\"; } >/dev/null 2>&1 || true # supacode-managed-hook",
             "timeout": 5,
             "type": "command"
@@ -133,6 +123,16 @@
           }
         ],
         "matcher": "AskUserQuestion|ExitPlanMode"
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
+            "timeout": 10
+          }
+        ]
       }
     ],
     "SessionEnd": [
@@ -192,18 +192,18 @@
             "type": "command"
           }
         ]
-      }
-    ],
-    "Stop": [
+      },
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
-      },
+      }
+    ],
+    "Stop": [
       {
         "hooks": [
           {
@@ -212,15 +212,24 @@
             "type": "command"
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
+            "timeout": 10
+          }
+        ]
       }
     ],
     "StopFailure": [
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       }
@@ -229,9 +238,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       }
@@ -240,9 +249,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       }
@@ -251,9 +260,9 @@
       {
         "hooks": [
           {
+            "type": "command",
             "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-            "timeout": 10,
-            "type": "command"
+            "timeout": 10
           }
         ]
       }
@@ -262,7 +271,7 @@
       {
         "hooks": [
           {
-            "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
+            "command": "[ -n \"${SUPACODE_SURFACE_ID:-}\" ] && { __ppid=$(ps -o ppid= -p $$ 2>/dev/null | tr -d '[:space:]'); __tty=$(ps -o tty= -p \"$__ppid\" 2>/dev/null | tr -d '[:space:]'); case \"$__tty\" in *[0-9]*) __tty=\"/dev/${__tty#/dev/}\";; *) __tty=\"/dev/tty\";; esac; __sp=\"\"; [ -n \"${SUPACODE_SOCKET_PATH:-}\" ] && [ -n \"$__ppid\" ] && __sp=\";pid=$__ppid\"; printf '\\033]3008;start=claude;event=busy%s\\033\\\\' \"$__sp\" > \"$__tty\"; } >/dev/null 2>&1 || true # supacode-managed-hook",
             "timeout": 10,
             "type": "command"
           }
@@ -271,9 +280,9 @@
       {
         "hooks": [
           {
-            "command": "[ -n \"${SUPACODE_SURFACE_ID:-}\" ] && { __ppid=$(ps -o ppid= -p $$ 2>/dev/null | tr -d '[:space:]'); __tty=$(ps -o tty= -p \"$__ppid\" 2>/dev/null | tr -d '[:space:]'); case \"$__tty\" in *[0-9]*) __tty=\"/dev/${__tty#/dev/}\";; *) __tty=\"/dev/tty\";; esac; __sp=\"\"; [ -n \"${SUPACODE_SOCKET_PATH:-}\" ] && [ -n \"$__ppid\" ] && __sp=\";pid=$__ppid\"; printf '\\033]3008;start=claude;event=busy%s\\033\\\\' \"$__sp\" > \"$__tty\"; } >/dev/null 2>&1 || true # supacode-managed-hook",
-            "timeout": 10,
-            "type": "command"
+            "type": "command",
+            "command": "if [ -f '~/.orca/agent-hooks/claude-hook.sh' ] && [ -r '~/.orca/agent-hooks/claude-hook.sh' ] && [ -x '~/.orca/agent-hooks/claude-hook.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-hook.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
+            "timeout": 10
           }
         ]
       }
@@ -281,8 +290,8 @@
   },
   "model": "opus[1m]",
   "statusLine": {
-    "command": "if [ -f '~/.orca/agent-hooks/claude-statusline.sh' ] && [ -r '~/.orca/agent-hooks/claude-statusline.sh' ] && [ -x '~/.orca/agent-hooks/claude-statusline.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-statusline.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi",
-    "type": "command"
+    "type": "command",
+    "command": "if [ -f '~/.orca/agent-hooks/claude-statusline.sh' ] && [ -r '~/.orca/agent-hooks/claude-statusline.sh' ] && [ -x '~/.orca/agent-hooks/claude-statusline.sh' ]; then /bin/sh '~/.orca/agent-hooks/claude-statusline.sh'; else { command -p cat 2>/dev/null || cat; } >/dev/null 2>&1 || :; fi"
   },
   "theme": "light",
   "tui": "fullscreen"
