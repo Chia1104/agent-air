@@ -42,7 +42,7 @@ Deduplicate by the skill's declared frontmatter `name`, not merely by directory 
 
 This prevents drift where nearly identical skills evolve independently and makes the repository's source of truth obvious.
 
-See `references/shared-skills-dedup.md` for an implementation and verification checklist.
+See `references/shared-skills-dedup.md` for an implementation and verification checklist. See `references/cross-machine-roundtrip.md` for publishing updates from one computer and safely applying them on another.
 
 ## Snapshot workflow
 
@@ -59,6 +59,14 @@ See `references/shared-skills-dedup.md` for an implementation and verification c
 9. Run syntax, secret, duplicate-name, and install tests.
 
 Snapshot scripts should be deterministic and safe to rerun. Report post-dedup file counts and sizes, not the pre-dedup copy totals.
+
+## Cross-machine round trip
+
+Treat the portability repository as the source of truth, but snapshot from a machine only after pulling remote changes. When a shared skill is updated through an agent symlink, its canonical local tree changes directly and can be snapshotted normally. If an updater replaces that symlink with a real agent-specific directory, compare it against the shared tree and explicitly reconcile the desired version into shared before snapshotting; otherwise shared-name deduplication can discard the updater-created variant.
+
+After snapshotting, run tests, secret scanning, syntax/diff checks, inspect the diff, then commit and push. On another computer, pull first, dry-run the installer, then apply skills. Apply sanitized configs separately, and restore secrets or OAuth sessions outside Git.
+
+See `references/cross-machine-roundtrip.md` for commands and conflict policy.
 
 ## Secret-safe MCP and config handling
 

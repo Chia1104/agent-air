@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel/turborepo.git",
       "skillPath": "skills/turborepo/SKILL.md",
-      "skillFolderHash": "439f586b421147775c7cc707b57a6141684fcbef",
+      "skillFolderHash": "36530bf759fa787f727fb9a1695d5cb9e75d497b",
       "installedAt": "2026-01-23T08:11:04.624Z",
-      "updatedAt": "2026-08-08T16:18:59.283Z"
+      "updatedAt": "2026-08-13T02:19:54.187Z"
     },
     "frontend-testing": {
       "source": "langgenius/dify",
@@ -177,9 +177,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/ayghri/i-have-adhd.git",
       "skillPath": "skills/i-have-adhd/SKILL.md",
-      "skillFolderHash": "2c4c2b7fd5b0f9a4071a780a536e63816e0e8694",
+      "skillFolderHash": "871e88cbe9b167670c170c53c8173c68609a2ae9",
       "installedAt": "2026-07-21T10:14:45.891Z",
-      "updatedAt": "2026-08-08T16:19:15.828Z"
+      "updatedAt": "2026-08-13T02:19:55.792Z"
     },
     "no-ai-slop": {
       "source": "petergyang/no-ai-slop",
