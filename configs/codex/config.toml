@@ -50,6 +50,15 @@ trusted_hash = "sha256:f72c783951c743dfc400363caaada3f0a1afca825cd7686da13e9cefb
 [hooks.state."~/.codex/hooks.json:stop:0:0"]
 trusted_hash = "sha256:747380d269f1a63d15f9039ae22f741ae4891f017eb7e9c455533bf51c2e538d"
 
+[hooks.state."~/.codex/hooks.json:session_start:1:0"]
+trusted_hash = "sha256:db766c50ab85093ce9d20634c1ddcfebd755ce433a31c2745f87f79bda64b262"
+
+[hooks.state."~/.codex/hooks.json:user_prompt_submit:1:0"]
+trusted_hash = "sha256:fb3be58db5ee7b2c9545c22102d419a3c2d087bbb5c8d479d8f88630c1f128c1"
+
+[hooks.state."~/.codex/hooks.json:stop:1:0"]
+trusted_hash = "sha256:071a31ec8697e93a44c6363d1cec91e93945b33824c7a077bba9a2200f0ffdcd"
+
 [marketplaces.openai-bundled]
 last_updated = "2026-08-03T11:51:09Z"
 source = "~/.codex/.tmp/bundled-marketplaces/openai-bundled"
