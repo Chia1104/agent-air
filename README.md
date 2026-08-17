@@ -1,18 +1,18 @@
 # Agent Air
 
-這個 repo 是個人 AI agent 設定的跨電腦同步來源。目標是切換到其他電腦時，只要 clone 此 repo，就能恢復一致、可審查且不含機密的 agent 環境。
+Agent Air is the source of truth for syncing personal AI agent settings across computers. Clone this repository on a new machine to restore a consistent, reviewable agent environment without committing secrets.
 
-重點包括：
+It includes:
 
-- 共用與 agent-specific skills
-- Hermes、Claude Code、Codex、Cursor、OpenCode、Gemini 的非機密設定
-- MCP server 定義（token 改成環境變數 placeholder）
-- 快照、安裝與機密掃描腳本
+- Shared and agent-specific skills
+- Non-secret settings for Hermes, Claude Code, Codex, Cursor, OpenCode, and Gemini
+- MCP server definitions with tokens replaced by environment variable references
+- Snapshot, installation, test, and secret-scanning scripts
 
-## 目錄
+## Repository layout
 
 ```text
-configs/                 經過 sanitization 的 agent 設定
+configs/                 Sanitized agent settings
   hermes/
   claude/
   codex/
@@ -20,46 +20,47 @@ configs/                 經過 sanitization 的 agent 設定
   opencode/
   gemini/
 skills/
-  shared/                canonical 共用 skills（來自 ~/.agents/skills）
+  shared/                Canonical shared skills from ~/.agents/skills
   hermes/                Hermes-specific skills
-  claude|codex|.../      各 agent 額外的 local skills
-manifests/inventory.json 目前安裝結構清單
-scripts/snapshot.py      從本機重新產生快照
-scripts/install.py       在新機器安裝；預設只 dry-run
-scripts/check-secrets.py 提交前掃描疑似機密
-private/                 本機私密設定（被 gitignore；不會建立或提交）
+  claude|codex|.../      Unique agent-specific skills
+manifests/inventory.json Snapshot inventory
+scripts/snapshot.py      Capture settings from the current machine
+scripts/install.py       Install settings on another machine; dry-run by default
+scripts/check-secrets.py Scan files for likely secrets before committing
+tests/                   Tests for snapshot and deduplication behavior
+private/                 Local private settings; gitignored and never committed
 ```
 
-`manifests/inventory.json` 的 `skills` 是去重後 repo 實際保存的 skill names；`source_skills` 則記錄快照當下各 agent 原始目錄中的 local／symlink 狀態。
+In `manifests/inventory.json`, `skills` lists the deduplicated skill names stored in this repository. `source_skills` records the local and symlinked skills found in each agent's source directory when the snapshot was created.
 
-> `skills/hermes` 不包含 Hermes 的 `.hub` index/cache、curator backups 或其他 runtime state；Codex 內建 `.system` skills 也不納入版本控制。這些應由各工具本身安裝或更新。
+> `skills/hermes` excludes Hermes `.hub` indexes and caches, curator backups, and other runtime state. Codex's built-in `.system` skills are also excluded. Each tool should install or update those files itself.
 
-## 快照本機設定
+## Capture settings from the current machine
 
 ```bash
 python3 scripts/snapshot.py
 python3 scripts/check-secrets.py
 ```
 
-只更新 configs／manifest，不重新複製 skills：
+To update only configs and the inventory without copying skills again:
 
 ```bash
 python3 scripts/snapshot.py --configs-only
 ```
 
-`snapshot.py` 會：
+`snapshot.py`:
 
-1. 將 `~/.agents/skills` 放到 `skills/shared`。
-2. 保存各 agent 非 symlink 的額外 skills；只要 skill frontmatter 的 `name` 已存在於 shared，就移除 agent-specific 副本，即使內容略有差異。
-3. 若相同 skill 同時出現在至少兩個 agent 且整個目錄內容完全相同，自動提升到 `skills/shared`，各 agent 安裝時改用 symlink。
-4. 保存 MCP 與主要設定。
-5. 將敏感欄位改成 `${ENV_VAR}`，並把 home path 改成 `~`。
+1. Copies `~/.agents/skills` into `skills/shared`.
+2. Captures non-symlinked, agent-specific skills. If a skill's frontmatter `name` already exists in shared, the agent-specific copy is removed even if its contents differ.
+3. Promotes a skill to `skills/shared` when two or more agents have identical copies of the entire skill directory. Those agents use symlinks when the settings are installed.
+4. Captures MCP and primary agent settings.
+5. Replaces sensitive values with `${ENV_VAR}` references and rewrites the current home directory as `~`.
 
-這是防呆，不是完整的秘密管理器；每次 commit 前仍應執行 `check-secrets.py` 並人工檢查 diff。
+The sanitizer is a safety check, not a complete secret-management system. Always run `check-secrets.py` and review the diff before committing.
 
-## 從某台電腦回寫更新到 repo
+## Sync updates from a computer back to the repository
 
-當某台電腦上的 agent、MCP 或 skills 有更新時，先讓本機 repo 跟遠端同步，再擷取本機狀態：
+When an agent, MCP server, or skill changes on one computer, update the local repository before capturing that machine's state:
 
 ```bash
 cd ~/Documents/GitHub/agent-air
@@ -72,7 +73,7 @@ git status --short
 git diff
 ```
 
-人工確認 diff 沒有 token、OAuth credential、session 或 cache 後，再提交：
+Review the diff for tokens, OAuth credentials, sessions, caches, and other machine-specific data. Then commit and push:
 
 ```bash
 git add -A
@@ -80,70 +81,61 @@ git commit -m "chore: sync agent settings"
 git push
 ```
 
-### Shared skill 更新
+### Updating a shared skill
 
-正常安裝後，各 agent 的共用 skill 都是指向 `~/.agents/skills/<name>` 的 symlink。若 agent 直接更新 symlink 指向的內容，只要執行上面的 `snapshot.py` 即可回寫到 `skills/shared`。
+After installation, shared skills are symlinks to `~/.agents/skills/<name>`. If an agent updates the target of that symlink, run `snapshot.py` to write the new version back to `skills/shared`.
 
-先確認是否仍是 symlink：
+Check whether a skill is still a symlink:
 
 ```bash
 readlink ~/.claude/skills/<skill-name>
 readlink ~/.codex/skills/<skill-name>
 ```
 
-若 agent 的 updater 把 symlink 換成了自己的實體目錄，而且 shared 已有同名 skill，`skills/shared` 仍是 canonical；請先比較並將想保留的新版本更新到 `~/.agents/skills/<skill-name>`，再執行 snapshot：
+Some agent updaters may replace a symlink with a real directory. If shared already contains a skill with the same name, `skills/shared` remains canonical. Compare the versions and copy the version you want to keep into `~/.agents/skills/<skill-name>` before taking a snapshot:
 
 ```bash
 diff -ru ~/.agents/skills/<skill-name> ~/.claude/skills/<skill-name>
-# 確認 Claude 的版本才是要保留的版本後：
-rsync -a --delete ~/.claude/skills/<skill-name>/ ~/.agents/skills/<skill-name>/
+
+# Run this only after confirming that the Claude version should replace shared.
+rsync -a --delete \
+  ~/.claude/skills/<skill-name>/ \
+  ~/.agents/skills/<skill-name>/
+
 python3 scripts/snapshot.py
 ```
 
-不要在未檢查 diff 前使用 `rsync --delete`。如果同名 skill 的兩個版本都需要保留，應先改其中一個 skill frontmatter 的 `name`，讓它成為真正的 agent-specific skill。
+Do not use `rsync --delete` before reviewing the diff. If both same-name versions must remain available, change the frontmatter `name` of one skill so it becomes a distinct agent-specific skill.
 
-### 在其他電腦套用最新設定
+## Install on another computer
+
+Pull the latest repository changes, then run the installer without `--apply` to preview its work:
 
 ```bash
 cd ~/Documents/GitHub/agent-air
 git pull --rebase
-python3 scripts/install.py          # 先 dry-run
-python3 scripts/install.py --apply  # 安裝 skills
-```
-
-若也要套用 configs：
-
-```bash
-python3 scripts/install.py --configs --apply
-```
-
-## 安裝到另一台電腦
-
-先看 dry-run：
-
-```bash
 python3 scripts/install.py
 ```
 
-確認後安裝 skills：
+Install skills after reviewing the dry-run:
 
 ```bash
 python3 scripts/install.py --apply
 ```
 
-連 sanitized configs 一起安裝：
+Install sanitized configs as well:
 
 ```bash
 python3 scripts/install.py --configs --apply
 ```
 
-安裝器會將被取代的路徑備份成 `*.agent-air.bak`。共用 skills 安裝到 `~/.agents/skills`，各 agent 一律以相對 symlink 使用 shared 版本；repo 若仍有同名 agent-specific 副本，安裝器會停止並要求先重新執行 snapshot。Hermes 自有 skills 與共用 symlink 會一起安裝。
+The installer backs up replaced paths as `*.agent-air.bak`. Shared skills are installed in `~/.agents/skills`, and each agent uses relative symlinks to those canonical copies. If the repository still contains a duplicate agent-specific copy, the installer stops and asks you to run `snapshot.py` first. Hermes-specific skills and shared symlinks are installed together.
 
-## 機密資訊怎麼處理
+## Secrets and private settings
 
-### 推薦：公開 config 只引用環境變數
+### Reference environment variables from public configs
 
-Hermes MCP 支援 `${VAR}` 和 `${env:VAR}`，例如：
+Hermes MCP supports both `${VAR}` and `${env:VAR}`:
 
 ```yaml
 mcp_servers:
@@ -154,7 +146,7 @@ mcp_servers:
       GITHUB_PERSONAL_ACCESS_TOKEN: "${GITHUB_TOKEN}"
 ```
 
-HTTP MCP：
+For an HTTP MCP server:
 
 ```yaml
 mcp_servers:
@@ -164,21 +156,21 @@ mcp_servers:
       Authorization: "Bearer ${INTERNAL_MCP_TOKEN}"
 ```
 
-Hermes 的 secret scope 是 `~/.hermes/.env`（active profile 時則在該 profile 的 `.env`）。這個檔案不要提交。
+Hermes reads secrets from `~/.hermes/.env`, or from the active profile's `.env` when profiles are enabled. Do not commit that file.
 
-### OAuth MCP
+### OAuth MCP servers
 
-對 `auth: oauth` 的 server，不要搬 token。Hermes 將 token 保存在 `~/.hermes/mcp-tokens/<server>.json`；新電腦執行：
+Do not copy tokens for servers configured with `auth: oauth`. Hermes stores those tokens in `~/.hermes/mcp-tokens/<server>.json`. Authorize the server again on a new computer:
 
 ```bash
 hermes mcp login <server>
 ```
 
-### Agent 能不能讀 gitignored config？
+### Can an agent read a gitignored config file?
 
-**可以。** `.gitignore` 只控制 Git tracking，不是存取權限。只要 agent 的 sandbox/approval policy 允許，`read_file`、shell 或程式仍能讀 repo 內的 `private/...`。
+Yes. `.gitignore` controls Git tracking, not filesystem access. An agent can still read files under `private/` through file tools, shell commands, or scripts when its sandbox and approval policy allow it.
 
-建議做法：
+Suggested layout:
 
 ```text
 private/
@@ -186,12 +178,12 @@ private/
   cursor.mcp.local.json
 ```
 
-- `private/` 已在 `.gitignore`。
-- 用 `git check-ignore -v private/hermes.env` 驗證。
-- 不要在 `AGENTS.md`、skill 或 prompt 中貼出 secret。
-- 不要依賴 ignore 作安全邊界；若 agent 不應看見秘密，請用 macOS Keychain、1Password CLI、受限 shell wrapper 或 MCP OAuth，並只在執行時注入。
+- `private/` is ignored by Git.
+- Verify the rule with `git check-ignore -v private/hermes.env`.
+- Do not paste secrets into `AGENTS.md`, skills, or prompts.
+- Do not treat `.gitignore` as a security boundary. If an agent must not see a secret, use macOS Keychain, 1Password CLI, an access-controlled wrapper, or MCP OAuth, and inject the secret only at runtime.
 
-範例：
+Create a local environment file:
 
 ```bash
 mkdir -p private
@@ -199,26 +191,28 @@ cp .env.example private/hermes.env
 chmod 600 private/hermes.env
 ```
 
-## 驗證
+## Validation
 
 ```bash
+python3 -m unittest discover -s tests -p 'test_*.py' -v
 python3 scripts/check-secrets.py
-git status --short
+python3 scripts/install.py
 git diff --check
+git status --short
 ```
 
-若要確認 ignore：
+Verify ignore rules:
 
 ```bash
 git check-ignore -v private/hermes.env .env
 ```
 
-## 目前 MCP 摘要
+## Current Hermes MCP servers
 
-Hermes 的三個 MCP 都是 OAuth 型態，因此 repo 只保存 server URL 與 `auth: oauth`：
+The current Hermes MCP servers use OAuth, so this repository stores only their server URLs and `auth: oauth` settings:
 
 - Atlassian
 - Context7
 - Figma
 
-OAuth token 不在此 repo；新機器需重新登入。
+OAuth tokens are not stored in this repository. Authorize each server again on a new computer.
