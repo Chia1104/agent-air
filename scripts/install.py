@@ -4,10 +4,18 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
+import shlex
 import shutil
+import subprocess
 from pathlib import Path
+
+try:
+    from plugin_sync import claude_install_commands, codex_install_commands, load_manifest
+except ModuleNotFoundError:
+    from scripts.plugin_sync import claude_install_commands, codex_install_commands, load_manifest
 
 REPO = Path(__file__).resolve().parents[1]
 HOME = Path.home()
@@ -128,10 +136,72 @@ def install_shared_links(agent: str, target: Path, dry_run: bool) -> None:
         link.symlink_to(relative, target_is_directory=True)
 
 
+def install_local_plugins(source: Path, target: Path, dry_run: bool) -> None:
+    if not source.exists():
+        return
+    for child in sorted(source.iterdir(), key=lambda path: path.name):
+        destination = target / child.name
+        print(f"copy local plugin: {child} -> {destination}")
+        if dry_run:
+            continue
+        target.mkdir(parents=True, exist_ok=True)
+        backup(destination)
+        if child.is_dir():
+            shutil.copytree(child, destination)
+        elif child.is_file():
+            shutil.copy2(child, destination)
+
+
+def read_json(path: Path, default: object) -> object:
+    try:
+        return json.loads(path.read_text())
+    except (OSError, json.JSONDecodeError):
+        return default
+
+
+def install_remote_plugins(dry_run: bool, offline: bool) -> None:
+    claude_manifest = load_manifest(REPO / "plugins/claude/manifest.json")
+    codex_manifest = load_manifest(REPO / "plugins/codex/manifest.json")
+    claude_installed = read_json(HOME / ".claude/plugins/installed_plugins.json", {"plugins": {}})
+    claude_marketplaces = read_json(HOME / ".claude/plugins/known_marketplaces.json", {})
+    installed_claude_ids = set(claude_installed.get("plugins", {})) if isinstance(claude_installed, dict) else set()
+    marketplace_names = set(claude_marketplaces) if isinstance(claude_marketplaces, dict) else set()
+
+    installed_codex_ids: set[str] = set()
+    if not offline:
+        try:
+            result = subprocess.run(
+                ["codex", "plugin", "list", "--json"],
+                text=True,
+                capture_output=True,
+                check=True,
+            )
+            raw = json.loads(result.stdout)
+            installed_codex_ids = {
+                record["pluginId"]
+                for record in raw.get("installed", [])
+                if record.get("pluginId")
+            }
+        except (OSError, subprocess.SubprocessError, json.JSONDecodeError):
+            pass
+
+    commands = claude_install_commands(claude_manifest, installed_claude_ids, marketplace_names)
+    commands.extend(codex_install_commands(codex_manifest, installed_codex_ids))
+    for command in commands:
+        print("plugin command: " + shlex.join(command))
+        if dry_run or offline:
+            continue
+        subprocess.run(command, check=True)
+    if offline and commands:
+        print("offline mode: remote plugin commands were not executed")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true", help="Perform writes; default is dry-run")
     parser.add_argument("--configs", action="store_true", help="Also install sanitized configs (requires secrets in environment/private files)")
+    parser.add_argument("--plugins", action="store_true", help="Also restore local plugins and install missing Claude/Codex plugins")
+    parser.add_argument("--offline", action="store_true", help="Do not run network/plugin CLI commands; local plugin files are still restored")
     args = parser.parse_args()
     dry_run = not args.apply
     validate_no_shared_duplicates()
@@ -152,6 +222,13 @@ def main() -> int:
             backup(target)
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
+
+    if args.plugins:
+        if not args.configs:
+            print("warning: use --configs with --plugins on a new machine so Codex marketplace settings are restored first")
+        install_local_plugins(REPO / "plugins/hermes/local", HOME / ".hermes/plugins", dry_run)
+        install_local_plugins(REPO / "plugins/opencode/local", HOME / ".config/opencode/plugins", dry_run)
+        install_remote_plugins(dry_run, args.offline)
 
     print("dry-run complete; add --apply to write changes." if dry_run else "install complete.")
     return 0

@@ -13,6 +13,11 @@ import subprocess
 from pathlib import Path
 from typing import Any
 
+try:
+    from plugin_sync import snapshot_plugins
+except ModuleNotFoundError:
+    from scripts.plugin_sync import snapshot_plugins
+
 REPO = Path(__file__).resolve().parents[1]
 HOME = Path.home()
 
@@ -346,6 +351,7 @@ def main() -> int:
             copied.append((name, len(files), sum(path.stat().st_size for path in files)))
 
     config_count = sum(write_config(relative, source) for relative, source in CONFIG_SOURCES.items())
+    plugin_summary = snapshot_plugins(REPO, HOME)
     manifest_dir = REPO / "manifests"
     manifest_dir.mkdir(parents=True, exist_ok=True)
     (manifest_dir / "inventory.json").write_text(
@@ -355,6 +361,12 @@ def main() -> int:
     for name, files, size in copied:
         print(f"skills/{name}: {files} files, {size} bytes")
     print(f"configs: {config_count} sanitized files")
+    print(
+        "plugins: "
+        f"Claude {plugin_summary['claude']}, Codex {plugin_summary['codex']}, "
+        f"Hermes local {len(plugin_summary['hermesLocal'])}, "
+        f"OpenCode local {len(plugin_summary['opencodeLocal'])}"
+    )
     print("Secrets were replaced with ${ENV_VAR} placeholders; run scripts/check-secrets.py next.")
     return 0
 

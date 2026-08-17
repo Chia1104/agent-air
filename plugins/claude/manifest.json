@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "plugins": [
+    {
+      "id": "auth@himself65-auth-spec",
+      "scope": "user",
+      "version": "6.0.0",
+      "gitCommitSha": "bd50f2b0ca617d17211b86b702293b2e6d5cac3d",
+      "enabled": true
+    },
+    {
+      "id": "cloudflare@claude-plugins-official",
+      "scope": "user",
+      "version": "1.0.0",
+      "gitCommitSha": "f96bff754e428838818017f75817f0f9428acd48",
+      "enabled": true
+    },
+    {
+      "id": "codex@openai-codex",
+      "scope": "user",
+      "version": "1.0.6",
+      "gitCommitSha": "db52e28f4d9ded852ab3942cea316258ae4ef346",
+      "enabled": true
+    },
+    {
+      "id": "context7@claude-plugins-official",
+      "scope": "user",
+      "version": "unknown",
+      "enabled": true
+    },
+    {
+      "id": "figma@claude-plugins-official",
+      "scope": "user",
+      "version": "2.2.95",
+      "gitCommitSha": "2efd0e37d10c35c4a7cf6d2b7381c9dc1a569bd4",
+      "enabled": true
+    },
+    {
+      "id": "mattpocock-skills@claude-plugins-official",
+      "scope": "user",
+      "version": "1.2.3",
+      "gitCommitSha": "ed37663cc5fbef691ddfecd080dff42f7e7e350d",
+      "enabled": true
+    },
+    {
+      "id": "typescript-lsp@claude-plugins-official",
+      "scope": "user",
+      "version": "1.0.0",
+      "enabled": true
+    },
+    {
+      "id": "warp@claude-code-warp",
+      "scope": "user",
+      "version": "2.2.0",
+      "gitCommitSha": "e0e18e162aa5ec97a6d4cecdf66b08b75eb1e149",
+      "enabled": true
+    }
+  ],
+  "marketplaces": [
+    {
+      "name": "claude-code-warp",
+      "source": {
+        "source": "github",
+        "repo": "warpdotdev/claude-code-warp"
+      }
+    },
+    {
+      "name": "claude-plugins-official",
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    },
+    {
+      "name": "cloudflare",
+      "source": {
+        "source": "github",
+        "repo": "cloudflare/skills"
+      }
+    },
+    {
+      "name": "himself65-auth-spec",
+      "source": {
+        "source": "github",
+        "repo": "himself65/auth-spec"
+      }
+    },
+    {
+      "name": "openai-codex",
+      "source": {
+        "source": "github",
+        "repo": "openai/codex-plugin-cc"
+      }
+    }
+  ]
+}

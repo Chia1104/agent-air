@@ -8,3 +8,4 @@
 - Do not vendor runtime state, sessions, caches, auth databases, `.hub`, Hermes curator backups, or Codex built-in `.system` skills.
 - Treat `skills/shared` as the canonical cross-agent skill set. If a declared skill `name` exists in shared, do not keep any agent-specific copy or variant; installation must use the shared version. Keep only unique per-agent skills under `skills/<agent>`.
 - When an identical skill tree is present for two or more agents, promote one copy to `skills/shared` and remove all per-agent copies. Never deduplicate divergent same-name variants unless shared already defines the canonical version.
+- Track third-party plugins as declarative manifests, not downloaded caches or marketplace checkouts. Track local Hermes/OpenCode plugin source code, but exclude credentials, runtime state, and dependency directories.

@@ -23,6 +23,11 @@ skills/
   shared/                Canonical shared skills from ~/.agents/skills
   hermes/                Hermes-specific skills
   claude|codex|.../      Unique agent-specific skills
+plugins/
+  claude/manifest.json   Claude plugin and marketplace records
+  codex/manifest.json    Codex plugin records; managed runtime plugins are marked
+  hermes/local/          Local Hermes plugin source code
+  opencode/local/        Local OpenCode plugin source code
 manifests/inventory.json Snapshot inventory
 scripts/snapshot.py      Capture settings from the current machine
 scripts/install.py       Install settings on another machine; dry-run by default
@@ -53,8 +58,9 @@ python3 scripts/snapshot.py --configs-only
 1. Copies `~/.agents/skills` into `skills/shared`.
 2. Captures non-symlinked, agent-specific skills. If a skill's frontmatter `name` already exists in shared, the agent-specific copy is removed even if its contents differ.
 3. Promotes a skill to `skills/shared` when two or more agents have identical copies of the entire skill directory. Those agents use symlinks when the settings are installed.
-4. Captures MCP and primary agent settings.
-5. Replaces sensitive values with `${ENV_VAR}` references and rewrites the current home directory as `~`.
+4. Captures Claude and Codex plugin manifests plus local Hermes/OpenCode plugin source code. Downloaded plugin caches and marketplace checkouts are excluded.
+5. Captures MCP and primary agent settings.
+6. Replaces sensitive values with `${ENV_VAR}` references and rewrites the current home directory as `~`.
 
 The sanitizer is a safety check, not a complete secret-management system. Always run `check-secrets.py` and review the diff before committing.
 
@@ -129,7 +135,39 @@ Install sanitized configs as well:
 python3 scripts/install.py --configs --apply
 ```
 
+Restore plugin manifests and local plugin source code as part of a full new-machine setup:
+
+```bash
+python3 scripts/install.py --configs --plugins          # dry-run
+python3 scripts/install.py --configs --plugins --apply  # install
+```
+
+Use `--offline` to restore only local Hermes/OpenCode plugin files without running Claude or Codex marketplace commands:
+
+```bash
+python3 scripts/install.py --plugins --offline --apply
+```
+
 The installer backs up replaced paths as `*.agent-air.bak`. Shared skills are installed in `~/.agents/skills`, and each agent uses relative symlinks to those canonical copies. If the repository still contains a duplicate agent-specific copy, the installer stops and asks you to run `snapshot.py` first. Hermes-specific skills and shared symlinks are installed together.
+
+## Plugin synchronization
+
+Agent Air stores plugin state declaratively:
+
+- Claude: plugin IDs, scopes, enabled state, versions, Git commit SHAs when available, and marketplace sources.
+- Codex: plugin IDs, enabled state, versions, and whether Codex manages the plugin as part of its runtime.
+- Hermes and OpenCode: local plugin source code.
+
+The following are intentionally excluded:
+
+- Claude, Codex, and Cursor plugin caches
+- Downloaded marketplace checkouts
+- Codex `.plugin-appserver` and staging directories
+- `node_modules`
+- Installation timestamps and machine-specific install paths
+- Plugin credentials, OAuth tokens, sessions, and runtime state
+
+Codex runtime plugins such as `pdf@openai-primary-runtime` are recorded for audit purposes but are not installed by Agent Air; the Codex runtime manages them. Missing non-managed Codex plugins and missing Claude plugins are installed when `--plugins --apply` is used. Run the installer without `--apply` first to review every command.
 
 ## Secrets and private settings
 

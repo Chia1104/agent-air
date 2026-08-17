@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "plugins": [
+    {
+      "id": "auth@plugins-cli",
+      "version": "5.0.0",
+      "enabled": true,
+      "marketplace": "plugins-cli",
+      "managed": false
+    },
+    {
+      "id": "browser@openai-bundled",
+      "version": "unknown",
+      "marketplace": "openai-bundled",
+      "managed": true,
+      "enabled": true
+    },
+    {
+      "id": "computer-use@openai-bundled",
+      "version": "unknown",
+      "marketplace": "openai-bundled",
+      "managed": true,
+      "enabled": true
+    },
+    {
+      "id": "documents@openai-primary-runtime",
+      "version": "26.802.11031",
+      "enabled": true,
+      "marketplace": "openai-primary-runtime",
+      "managed": true
+    },
+    {
+      "id": "pdf@openai-primary-runtime",
+      "version": "26.802.11031",
+      "enabled": true,
+      "marketplace": "openai-primary-runtime",
+      "managed": true
+    },
+    {
+      "id": "presentations@openai-primary-runtime",
+      "version": "26.802.11031",
+      "enabled": true,
+      "marketplace": "openai-primary-runtime",
+      "managed": true
+    },
+    {
+      "id": "sites@openai-bundled",
+      "version": "unknown",
+      "marketplace": "openai-bundled",
+      "managed": true,
+      "enabled": true
+    },
+    {
+      "id": "spreadsheets@openai-primary-runtime",
+      "version": "26.802.11031",
+      "enabled": true,
+      "marketplace": "openai-primary-runtime",
+      "managed": true
+    },
+    {
+      "id": "template-creator@openai-primary-runtime",
+      "version": "26.802.11031",
+      "enabled": true,
+      "marketplace": "openai-primary-runtime",
+      "managed": true
+    },
+    {
+      "id": "visualize@openai-bundled",
+      "version": "unknown",
+      "marketplace": "openai-bundled",
+      "managed": true,
+      "enabled": true
+    }
+  ]
+}

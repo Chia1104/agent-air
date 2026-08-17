@@ -8,7 +8,7 @@ repos:
         pass_filenames: false
       - id: agent-air-python-compile
         name: Compile Agent Air scripts
-        entry: python3 -m py_compile scripts/check-secrets.py scripts/install.py scripts/snapshot.py
+        entry: python3 -m py_compile scripts/check-secrets.py scripts/install.py scripts/plugin_sync.py scripts/snapshot.py
         language: system
         pass_filenames: false
       - id: agent-air-tests

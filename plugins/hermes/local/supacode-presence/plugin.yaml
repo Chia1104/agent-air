@@ -1,0 +1,14 @@
+name: supacode-presence
+version: "1.0.0"
+description: Report Hermes agent presence and turn notifications to Supacode via OSC 3008.
+author: Supacode
+hooks:
+  - on_session_start
+  - pre_llm_call
+  - transform_llm_output
+  - on_session_end
+provides_hooks:
+  - on_session_start
+  - pre_llm_call
+  - transform_llm_output
+  - on_session_end
