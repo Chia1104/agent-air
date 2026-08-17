@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel/turborepo.git",
       "skillPath": "skills/turborepo/SKILL.md",
-      "skillFolderHash": "36530bf759fa787f727fb9a1695d5cb9e75d497b",
+      "skillFolderHash": "d830e83a21ce885d2efc8e044765a5cd1f2c3964",
       "installedAt": "2026-01-23T08:11:04.624Z",
-      "updatedAt": "2026-08-13T02:19:54.187Z"
+      "updatedAt": "2026-08-17T06:54:24.108Z"
     },
     "frontend-testing": {
       "source": "langgenius/dify",
@@ -195,9 +195,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/orca-cli/SKILL.md",
-      "skillFolderHash": "a5a90c9731fbee834eca6d655b39eaa795dd2323",
+      "skillFolderHash": "ee3a35c76f875ea6ebaf68947af13ba6346b13f2",
       "installedAt": "2026-08-13T03:10:14.633Z",
-      "updatedAt": "2026-08-13T03:10:14.633Z"
+      "updatedAt": "2026-08-17T06:54:33.659Z"
     },
     "orchestration": {
       "source": "stablyai/orca",
@@ -207,6 +207,15 @@
       "skillFolderHash": "9aa26fde93c0592e5983cdca1ccd33b402802255",
       "installedAt": "2026-08-13T03:10:14.635Z",
       "updatedAt": "2026-08-13T03:10:14.635Z"
+    },
+    "install-anti-slop": {
+      "source": "dmmulroy/anti-slop",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dmmulroy/anti-slop.git",
+      "skillPath": "skills/install-anti-slop/SKILL.md",
+      "skillFolderHash": "b1512e24318785e3f9028e19a8f7cbec11343088",
+      "installedAt": "2026-08-17T06:54:04.506Z",
+      "updatedAt": "2026-08-17T06:54:04.506Z"
     }
   },
   "dismissed": {
