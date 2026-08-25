@@ -31,7 +31,7 @@
     {
       "id": "figma@claude-plugins-official",
       "scope": "user",
-      "version": "2.2.95",
+      "version": "2.2.96",
       "gitCommitSha": "2efd0e37d10c35c4a7cf6d2b7381c9dc1a569bd4",
       "enabled": true
     },
