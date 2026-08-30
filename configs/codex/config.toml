@@ -1,10 +1,10 @@
 model = "gpt-5.6-sol"
 model_reasoning_effort = "high"
-model_context_window = 900000
+model_context_window = 900_000
 model_auto_compact_token_limit = "${MCP_MODEL_AUTO_COMPACT_TOKEN_LIMIT}"
 notify = [
-    "~/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
-    "turn-ended",
+  "~/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+  "turn-ended"
 ]
 personality = "pragmatic"
 
@@ -18,11 +18,9 @@ hooks = true
 [[hooks.SessionStart]]
 matcher = "startup|resume|clear|compact"
 
-[[hooks.SessionStart.hooks]]
-command = 'echo "Code discovery: prefer codebase-memory-mcp (search_graph, trace_path, get_code_snippet, query_graph, search_code) over grep/file-read; run index_repository first if the project is not indexed."'
-type = "command"
-
-[hooks.state]
+  [[hooks.SessionStart.hooks]]
+  command = 'echo "Code discovery: prefer codebase-memory-mcp (search_graph, trace_path, get_code_snippet, query_graph, search_code) over grep/file-read; run index_repository first if the project is not indexed."'
+  type = "command"
 
 [hooks.state."~/.codex/config.toml:session_start:0:0"]
 enabled = true
@@ -78,60 +76,58 @@ source_type = "local"
 command = "~/.local/bin/codebase-memory-mcp"
 
 [mcp_servers.computer-use]
-args = ["mcp"]
+args = [ "mcp" ]
 command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
 cwd = "."
 enabled = false
 
 [mcp_servers.heroui-native]
-args = [
-    "-y",
-    "@heroui/native-mcp@latest",
-]
+args = [ "-y", "@heroui/native-mcp@latest" ]
 command = "npx"
 
 [mcp_servers.heroui-native-pro]
 url = "https://native-mcp.heroui.pro/mcp"
 
-[mcp_servers.heroui-native-pro.http_headers]
-x-heroui-personal-token = "${HEROUI_NATIVE_PRO_HEROUI_PERSONAL_TOKEN}"
+  [mcp_servers.heroui-native-pro.http_headers]
+  x-heroui-personal-token = "${HEROUI_NATIVE_PRO_HEROUI_PERSONAL_TOKEN}"
 
 [mcp_servers.heroui-pro]
 url = "https://mcp.heroui.pro/mcp"
 
-[mcp_servers.heroui-pro.http_headers]
-x-heroui-personal-token = "${HEROUI_PRO_HEROUI_PERSONAL_TOKEN}"
+  [mcp_servers.heroui-pro.http_headers]
+  x-heroui-personal-token = "${HEROUI_PRO_HEROUI_PERSONAL_TOKEN}"
 
 [mcp_servers.heroui-react]
-args = [
-    "-y",
-    "@heroui/react-mcp@latest",
-]
+args = [ "-y", "@heroui/react-mcp@latest" ]
 command = "npx"
 
 [mcp_servers.node_repl]
-args = []
+args = [ ]
 command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
 startup_timeout_sec = 120
 
-[mcp_servers.node_repl.env]
-BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
-BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.727.51351"
-CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
-CODEX_HOME = "~/.codex"
-NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
-NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
-NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
-NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
-NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
-NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "028a14b6eaa6d98dac2aae00764345ab9f244801ed8493d42b9af3be5575006e,f204d340535055781952b10ed396de20b842f00a19e430852f7e121ad1ce91f6"
-NODE_REPL_TRUSTED_CODE_PATHS = "~/.codex"
-SKY_CUA_SERVICE_PATH = "~/.codex/computer-use/Codex Computer Use.app"
+  [mcp_servers.node_repl.env]
+  BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+  BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+  BROWSER_USE_CODEX_APP_VERSION = "26.727.51351"
+  CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+  CODEX_HOME = "~/.codex"
+  NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+  NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+  NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
+  NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+  NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+  NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
+  NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "028a14b6eaa6d98dac2aae00764345ab9f244801ed8493d42b9af3be5575006e,f204d340535055781952b10ed396de20b842f00a19e430852f7e121ad1ce91f6"
+  NODE_REPL_TRUSTED_CODE_PATHS = "~/.codex"
+  SKY_CUA_SERVICE_PATH = "~/.codex/computer-use/Codex Computer Use.app"
 
 [mcp_servers.railway]
 url = "https://mcp.railway.com"
+
+[mcp_servers.vgpu]
+type = "http"
+url = "https://vgpu.sh/api/mcp"
 
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"

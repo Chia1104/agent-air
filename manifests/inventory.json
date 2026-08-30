@@ -118,6 +118,7 @@
       "heroui-native",
       "heroui-react",
       "i-have-adhd",
+      "install-anti-slop",
       "no-ai-slop",
       "npm-deps-cleanup",
       "orca-cli",
@@ -130,6 +131,7 @@
       "typescript",
       "use-railway",
       "vercel-react-best-practices",
+      "vgpu",
       "vitest",
       "web-design-guidelines",
       "workflow",
@@ -148,6 +150,7 @@
         "frontend-testing",
         "heroui-react",
         "i-have-adhd",
+        "install-anti-slop",
         "no-ai-slop",
         "npm-deps-cleanup",
         "orca-cli",
@@ -158,6 +161,7 @@
         "typescript",
         "use-railway",
         "vercel-react-best-practices",
+        "vgpu",
         "vitest",
         "web-design-guidelines",
         "workflow",
@@ -196,6 +200,7 @@
         "frontend-design",
         "frontend-testing",
         "i-have-adhd",
+        "install-anti-slop",
         "no-ai-slop",
         "npm-deps-cleanup",
         "orca-cli",
@@ -204,6 +209,7 @@
         "use-railway",
         "vercel-react-best-practices",
         "vitest",
+        "workflow",
         "zustand"
       ]
     },
@@ -215,8 +221,7 @@
         "heroui-native",
         "security-audit",
         "supacode-cli",
-        "supacode-deeplinks",
-        "workflow"
+        "supacode-deeplinks"
       ],
       "symlinked": [
         "agent-browser",
@@ -226,6 +231,7 @@
         "frontend-testing",
         "heroui-react",
         "i-have-adhd",
+        "install-anti-slop",
         "no-ai-slop",
         "npm-deps-cleanup",
         "orca-cli",
@@ -235,8 +241,10 @@
         "typescript",
         "use-railway",
         "vercel-react-best-practices",
+        "vgpu",
         "vitest",
         "web-design-guidelines",
+        "workflow",
         "zustand"
       ]
     },

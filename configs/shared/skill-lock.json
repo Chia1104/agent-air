@@ -6,18 +6,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel/turborepo.git",
       "skillPath": "skills/turborepo/SKILL.md",
-      "skillFolderHash": "d830e83a21ce885d2efc8e044765a5cd1f2c3964",
+      "skillFolderHash": "34eaa69f05167f1e1a809c131547a80b83bf8208",
       "installedAt": "2026-01-23T08:11:04.624Z",
-      "updatedAt": "2026-08-17T06:54:24.108Z"
+      "updatedAt": "2026-08-30T18:23:50.893Z"
     },
     "frontend-testing": {
       "source": "langgenius/dify",
       "sourceType": "github",
       "sourceUrl": "https://github.com/langgenius/dify.git",
       "skillPath": ".agents/skills/frontend-testing/SKILL.md",
-      "skillFolderHash": "79e06a0a285ed1fd93b77c9dc55c8dcc36e6c4c5",
+      "skillFolderHash": "df581be5917112fcb45761d9a47837ec5440304c",
       "installedAt": "2026-01-24T11:35:31.622Z",
-      "updatedAt": "2026-08-01T19:39:47.133Z"
+      "updatedAt": "2026-08-30T18:24:18.741Z"
     },
     "threejs-shaders": {
       "source": "cloudai-x/threejs-skills",
@@ -60,9 +60,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/agent-browser.git",
       "skillPath": "skills/agent-browser/SKILL.md",
-      "skillFolderHash": "037e8078db4b20b4aa25c04f21c6de7d335ec449",
+      "skillFolderHash": "82def67855a0d2aad7794207951820fa5422fdb0",
       "installedAt": "2026-01-25T10:35:59.616Z",
-      "updatedAt": "2026-08-01T19:39:53.024Z"
+      "updatedAt": "2026-08-30T18:24:20.841Z"
     },
     "better-auth-best-practices": {
       "source": "better-auth/skills",
@@ -159,9 +159,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel/workflow.git",
       "skillPath": "skills/workflow/SKILL.md",
-      "skillFolderHash": "fd04f147f83ffc9a8c193d6d6699d7a1aa1d6575",
+      "skillFolderHash": "60e4adade3fddca3107bddec4b1820d2c36b5765",
       "installedAt": "2026-07-14T07:15:16.583Z",
-      "updatedAt": "2026-07-14T07:15:16.583Z"
+      "updatedAt": "2026-08-30T18:24:23.232Z"
     },
     "security-audit": {
       "source": "cloudflare/security-audit-skill",
@@ -213,9 +213,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/dmmulroy/anti-slop.git",
       "skillPath": "skills/install-anti-slop/SKILL.md",
-      "skillFolderHash": "b1512e24318785e3f9028e19a8f7cbec11343088",
+      "skillFolderHash": "31c294c983ea89bc585041cb43ec651b2df684a1",
       "installedAt": "2026-08-17T06:54:04.506Z",
-      "updatedAt": "2026-08-17T06:54:04.506Z"
+      "updatedAt": "2026-08-30T18:24:25.602Z"
+    },
+    "vgpu": {
+      "source": "vercel-labs/vgpu",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/vgpu.git",
+      "skillPath": "skills/vgpu/SKILL.md",
+      "skillFolderHash": "8017d02851f8d9b294027dd73eeba8994affd149",
+      "installedAt": "2026-08-30T18:22:23.969Z",
+      "updatedAt": "2026-08-30T18:22:23.969Z"
     }
   },
   "dismissed": {

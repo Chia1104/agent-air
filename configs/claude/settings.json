@@ -282,7 +282,7 @@
   "enabledPlugins": {
     "codex@openai-codex": true,
     "context7@claude-plugins-official": true,
-    "figma@claude-plugins-official": true,
+    "figma@claude-plugins-official": false,
     "mattpocock-skills@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "warp@claude-code-warp": true,
@@ -312,6 +312,6 @@
   "effortLevel": "high",
   "tui": "fullscreen",
   "theme": "auto",
-  "agentPushNotifEnabled": true,
-  "inputNeededNotifEnabled": true
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true
 }

@@ -38,6 +38,9 @@
     },
     "railway": {
       "url": "https://mcp.railway.com"
+    },
+    "vgpu": {
+      "url": "https://vgpu.sh/api/mcp"
     }
   }
 }
