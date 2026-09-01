@@ -145,6 +145,10 @@ moa:
   enabled: true
 skills:
   creation_nudge_interval: 15
+plugins:
+  enabled:
+    - herdr-agent-state
+    - orca-status
 code_execution:
   timeout: 300
   max_tool_calls: 50
@@ -227,10 +231,6 @@ mcp_servers:
     url: https://mcp.context7.com/mcp/oauth
     auth: oauth
     enabled: true
-plugins:
-  enabled:
-    - herdr-agent-state
-    - orca-status
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,

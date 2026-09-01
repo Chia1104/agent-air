@@ -225,6 +225,42 @@
       "skillFolderHash": "8017d02851f8d9b294027dd73eeba8994affd149",
       "installedAt": "2026-08-30T18:22:23.969Z",
       "updatedAt": "2026-08-30T18:22:23.969Z"
+    },
+    "orpc": {
+      "source": "middleapi/orpc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/middleapi/orpc.git",
+      "skillPath": "skills/orpc/SKILL.md",
+      "skillFolderHash": "47d8f19d0a1147e1b879e4ef719f9c1bca3af65b",
+      "installedAt": "2026-09-01T04:20:32.659Z",
+      "updatedAt": "2026-09-01T04:20:32.659Z"
+    },
+    "orpc-contract": {
+      "source": "middleapi/orpc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/middleapi/orpc.git",
+      "skillPath": "skills/orpc-contract/SKILL.md",
+      "skillFolderHash": "7e854bb13ecefca583d1cfbe0b0f617adbc3f544",
+      "installedAt": "2026-09-01T04:20:32.662Z",
+      "updatedAt": "2026-09-01T04:20:32.662Z"
+    },
+    "orpc-migrate": {
+      "source": "middleapi/orpc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/middleapi/orpc.git",
+      "skillPath": "skills/orpc-migrate/SKILL.md",
+      "skillFolderHash": "53de321d96e63c96a499de89d735b86c3d8a84fd",
+      "installedAt": "2026-09-01T04:20:32.663Z",
+      "updatedAt": "2026-09-01T04:20:32.663Z"
+    },
+    "orpc-openapi": {
+      "source": "middleapi/orpc",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/middleapi/orpc.git",
+      "skillPath": "skills/orpc-openapi/SKILL.md",
+      "skillFolderHash": "e34db7b795712a9d37c1d17b92472cc7ec9bba3e",
+      "installedAt": "2026-09-01T04:20:32.665Z",
+      "updatedAt": "2026-09-01T04:20:32.665Z"
     }
   },
   "dismissed": {

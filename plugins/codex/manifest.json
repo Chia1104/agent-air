@@ -10,66 +10,73 @@
     },
     {
       "id": "browser@openai-bundled",
-      "version": "unknown",
+      "version": "26.825.51511",
+      "enabled": true,
       "marketplace": "openai-bundled",
-      "managed": true,
-      "enabled": true
+      "managed": true
+    },
+    {
+      "id": "codex-app-tools@openai-bundled",
+      "version": "0.1.3",
+      "enabled": true,
+      "marketplace": "openai-bundled",
+      "managed": true
     },
     {
       "id": "computer-use@openai-bundled",
-      "version": "unknown",
+      "version": "1.0.1000919",
+      "enabled": true,
       "marketplace": "openai-bundled",
-      "managed": true,
-      "enabled": true
+      "managed": true
     },
     {
       "id": "documents@openai-primary-runtime",
-      "version": "26.802.11031",
+      "version": "26.826.12353",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
     },
     {
       "id": "pdf@openai-primary-runtime",
-      "version": "26.802.11031",
+      "version": "26.826.12353",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
     },
     {
       "id": "presentations@openai-primary-runtime",
-      "version": "26.802.11031",
+      "version": "26.826.12353",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
     },
     {
       "id": "sites@openai-bundled",
-      "version": "unknown",
+      "version": "0.1.46",
+      "enabled": true,
       "marketplace": "openai-bundled",
-      "managed": true,
-      "enabled": true
+      "managed": true
     },
     {
       "id": "spreadsheets@openai-primary-runtime",
-      "version": "26.802.11031",
+      "version": "26.826.12353",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
     },
     {
       "id": "template-creator@openai-primary-runtime",
-      "version": "26.802.11031",
+      "version": "26.826.12353",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
     },
     {
       "id": "visualize@openai-bundled",
-      "version": "unknown",
+      "version": "1.0.23",
+      "enabled": true,
       "marketplace": "openai-bundled",
-      "managed": true,
-      "enabled": true
+      "managed": true
     }
   ]
 }
