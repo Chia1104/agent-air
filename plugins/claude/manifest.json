@@ -25,13 +25,13 @@
     {
       "id": "context7@claude-plugins-official",
       "scope": "user",
-      "version": "ed404106fcd8",
+      "version": "1dd995193ba2",
       "enabled": true
     },
     {
       "id": "figma@claude-plugins-official",
       "scope": "user",
-      "version": "2.2.96",
+      "version": "2.2.107",
       "gitCommitSha": "2efd0e37d10c35c4a7cf6d2b7381c9dc1a569bd4",
       "enabled": false
     },

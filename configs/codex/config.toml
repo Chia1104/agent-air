@@ -4,7 +4,7 @@ model_context_window = 900_000
 model_auto_compact_token_limit = "${MCP_MODEL_AUTO_COMPACT_TOKEN_LIMIT}"
 notify = [
   "~/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
-  "turn-ended"
+  "turn-ended",
 ]
 personality = "pragmatic"
 service_tier = "default"
@@ -17,6 +17,8 @@ conversationDetailMode = "STEPS_COMMANDS"
 js_repl = false
 hooks = true
 
+# Keep all user-level hook definitions in this file. Using hooks.json at the
+# same time causes Codex to load two representations and emit a warning.
 [[hooks.SessionStart]]
 matcher = "startup|resume|clear|compact"
 
@@ -24,47 +26,21 @@ matcher = "startup|resume|clear|compact"
 command = 'echo "Code discovery: prefer codebase-memory-mcp (search_graph, trace_path, get_code_snippet, query_graph, search_code) over grep/file-read; run index_repository first if the project is not indexed."'
 type = "command"
 
+[[hooks.SessionStart]]
+
+[[hooks.SessionStart.hooks]]
+type = "command"
+command = '''bash '~/.codex/herdr-agent-state.sh' session'''
+timeout = 10
+
 [hooks.state]
 
 [hooks.state."~/.codex/config.toml:session_start:0:0"]
 enabled = true
 trusted_hash = "sha256:ed997f3f9766959ba56dc2243cd02468d6eadad80d92b7f5a650e6fc0fb0c050"
 
-[hooks.state."~/.codex/hooks.json:session_start:1:0"]
-trusted_hash = "sha256:db766c50ab85093ce9d20634c1ddcfebd755ce433a31c2745f87f79bda64b262"
-
-[hooks.state."~/.codex/hooks.json:user_prompt_submit:1:0"]
-trusted_hash = "sha256:fb3be58db5ee7b2c9545c22102d419a3c2d087bbb5c8d479d8f88630c1f128c1"
-
-[hooks.state."~/.codex/hooks.json:stop:1:0"]
-trusted_hash = "sha256:071a31ec8697e93a44c6363d1cec91e93945b33824c7a077bba9a2200f0ffdcd"
-
-[hooks.state."~/.codex/hooks.json:session_start:2:0"]
+[hooks.state."~/.codex/config.toml:session_start:1:0"]
 trusted_hash = "sha256:359d176cb8711411d1c06ac3fa4758864130624d7f00a51d94d21e3ece8aae14"
-
-[hooks.state."~/.codex/hooks.json:pre_tool_use:0:0"]
-trusted_hash = "sha256:6e341b344479bce507e4b8d67bb772568343cf4adbcd4f61e5aeb6b2bbbe5643"
-
-[hooks.state."~/.codex/hooks.json:permission_request:0:0"]
-trusted_hash = "sha256:cf61cb77eaba9edf848a450ad637c33a500478b097a9c7d794b7178997b2f306"
-
-[hooks.state."~/.codex/hooks.json:post_tool_use:0:0"]
-trusted_hash = "sha256:753fcaf858344ac6ca925b8c6876d92afeb23146b6407f3be39f1bcc063ffefc"
-
-[hooks.state."~/.codex/hooks.json:session_start:0:0"]
-trusted_hash = "sha256:d0510e64182ec82e2c6503d56a12eaf638aed8e91d8c423a9628969ef56183d1"
-
-[hooks.state."~/.codex/hooks.json:user_prompt_submit:0:0"]
-trusted_hash = "sha256:3381b1202255afdc0672643c36e80af9d9bdb7258b3200008fa9f8251b65fb2e"
-
-[hooks.state."~/.codex/hooks.json:subagent_start:0:0"]
-trusted_hash = "sha256:03f70de4f44016be89dc399326f1aa12e85265ffd151e7fa7eb5c1ba936afa16"
-
-[hooks.state."~/.codex/hooks.json:subagent_stop:0:0"]
-trusted_hash = "sha256:f72c783951c743dfc400363caaada3f0a1afca825cd7686da13e9cefbb2afb36"
-
-[hooks.state."~/.codex/hooks.json:stop:0:0"]
-trusted_hash = "sha256:747380d269f1a63d15f9039ae22f741ae4891f017eb7e9c455533bf51c2e538d"
 
 [marketplaces.openai-bundled]
 source_type = "local"
@@ -78,13 +54,13 @@ source = "~/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-r
 command = "~/.local/bin/codebase-memory-mcp"
 
 [mcp_servers.computer-use]
-args = [ "mcp" ]
+args = ["mcp"]
 command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
 cwd = "."
 enabled = false
 
 [mcp_servers.heroui-native]
-args = [ "-y", "@heroui/native-mcp@latest" ]
+args = ["-y", "@heroui/native-mcp@latest"]
 command = "npx"
 
 [mcp_servers.heroui-native-pro]
@@ -100,7 +76,7 @@ url = "https://mcp.heroui.pro/mcp"
 x-heroui-personal-token = "${HEROUI_PRO_HEROUI_PERSONAL_TOKEN}"
 
 [mcp_servers.heroui-react]
-args = [ "-y", "@heroui/react-mcp@latest" ]
+args = ["-y", "@heroui/react-mcp@latest"]
 command = "npx"
 
 [mcp_servers.node_repl]
@@ -115,13 +91,13 @@ NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin
 NODE_REPL_TRUSTED_CODE_PATHS = "~/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 CODEX_HOME = "~/.codex"
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
-BROWSER_USE_TINYSKY_ENABLED = "0"
-NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
-NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
-NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
+BROWSER_USE_TINYSKY_ENABLED = "1"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.825.51511"
-NODE_REPL_TRUSTED_SERVICES = '{"browser":"~/.codex/plugins/cache/openai-bundled/browser/26.825.51511/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+BROWSER_USE_CODEX_APP_VERSION = "26.901.22334"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"~/.codex/plugins/cache/openai-bundled/browser/26.901.22334/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
 SKY_CUA_SERVICE_PATH = "~/.codex/computer-use/Codex Computer Use.app"
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 
@@ -130,9 +106,9 @@ type = "http"
 url = "https://vgpu.sh/api/mcp"
 enabled = false
 
-[mcp_servers.cua_repl]
-command = "/Applications/ChatGPT.app/Contents/MacOS/ChatGPT"
-enabled = false
+[mcp_servers.chia_personal_site]
+url = "https://service.chia1104.dev/api/v1/mcp"
+http_headers = { "x-ch-api-key" = "", "x-cf-bypass-token" = "" }
 
 [notice.model_migrations]
 "gpt-5.3-codex" = "gpt-5.4"
@@ -170,6 +146,9 @@ enabled = true
 [plugins."codex-app-tools@openai-bundled"]
 enabled = true
 
+[plugins."unified-computer-use@openai-bundled"]
+enabled = true
+
 [projects."~"]
 trust_level = "trusted"
 
@@ -191,10 +170,16 @@ trust_level = "trusted"
 [projects."~/Documents/Codex/2026-08-31/give-me-a-morning-brief-with"]
 trust_level = "trusted"
 
-[projects."~/Library/Application Support/orca/rate-limit-pty-cwd"]
+[projects."~/Documents/Codex/2026-09-01/give-me-a-morning-brief-with"]
 trust_level = "trusted"
 
-[projects."~/Documents/Codex/2026-09-01/give-me-a-morning-brief-with"]
+[projects."~/Documents/Codex/2026-09-02/give-me-a-morning-brief-with"]
+trust_level = "trusted"
+
+[projects."~/Documents/Codex/2026-09-03/give-me-a-morning-brief-with"]
+trust_level = "trusted"
+
+[projects."~/Documents/Codex/2026-09-04/give-me-a-morning-brief-with"]
 trust_level = "trusted"
 
 [shell_environment_policy.set]
