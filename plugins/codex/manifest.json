@@ -31,7 +31,7 @@
     },
     {
       "id": "browser@openai-bundled",
-      "version": "26.901.22334",
+      "version": "26.901.41123",
       "enabled": true,
       "marketplace": "openai-bundled",
       "managed": true
@@ -52,7 +52,7 @@
     },
     {
       "id": "codex-security@openai-curated-remote",
-      "version": "0.1.22",
+      "version": "0.1.23",
       "enabled": true,
       "marketplace": "openai-curated-remote",
       "managed": true
@@ -73,7 +73,7 @@
     },
     {
       "id": "documents@openai-primary-runtime",
-      "version": "26.903.11726",
+      "version": "26.904.11930",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
@@ -122,7 +122,7 @@
     },
     {
       "id": "pdf@openai-primary-runtime",
-      "version": "26.903.11726",
+      "version": "26.904.11930",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
@@ -136,7 +136,7 @@
     },
     {
       "id": "presentations@openai-primary-runtime",
-      "version": "26.903.11726",
+      "version": "26.904.11930",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
@@ -157,21 +157,21 @@
     },
     {
       "id": "spreadsheets@openai-primary-runtime",
-      "version": "26.903.11726",
+      "version": "26.904.11930",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
     },
     {
       "id": "template-creator@openai-primary-runtime",
-      "version": "26.903.11726",
+      "version": "26.904.11930",
       "enabled": true,
       "marketplace": "openai-primary-runtime",
       "managed": true
     },
     {
       "id": "unified-computer-use@openai-bundled",
-      "version": "26.901.22334",
+      "version": "26.901.41123",
       "enabled": true,
       "marketplace": "openai-bundled",
       "managed": true

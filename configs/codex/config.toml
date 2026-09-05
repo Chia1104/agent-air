@@ -1,7 +1,8 @@
-model = "gpt-5.6-sol"
-model_reasoning_effort = "high"
-model_context_window = 900_000
-model_auto_compact_token_limit = "${MCP_MODEL_AUTO_COMPACT_TOKEN_LIMIT}"
+model = "gpt-6-astra"
+model_reasoning_effort = "medium"
+# model_context_window = 900_000
+# model_auto_compact_token_limit = 765_000
+
 notify = [
   "~/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
   "turn-ended",
@@ -16,6 +17,9 @@ conversationDetailMode = "STEPS_COMMANDS"
 [features]
 js_repl = false
 hooks = true
+
+[features.context_management]
+experimental_mode = true
 
 # Keep all user-level hook definitions in this file. Using hooks.json at the
 # same time causes Codex to load two representations and emit a warning.
@@ -96,8 +100,8 @@ NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
 NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
 NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.901.22334"
-NODE_REPL_TRUSTED_SERVICES = '{"browser":"~/.codex/plugins/cache/openai-bundled/browser/26.901.22334/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+BROWSER_USE_CODEX_APP_VERSION = "26.901.41123"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"~/.codex/plugins/cache/openai-bundled/browser/26.901.41123/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
 SKY_CUA_SERVICE_PATH = "~/.codex/computer-use/Codex Computer Use.app"
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 
@@ -182,5 +186,14 @@ trust_level = "trusted"
 [projects."~/Documents/Codex/2026-09-04/give-me-a-morning-brief-with"]
 trust_level = "trusted"
 
+[projects."~/Documents/GitHub/agent-air"]
+trust_level = "trusted"
+
+[projects."~/Documents/Codex/2026-09-05/c"]
+trust_level = "trusted"
+
 [shell_environment_policy.set]
 NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "028a14b6eaa6d98dac2aae00764345ab9f244801ed8493d42b9af3be5575006e,f204d340535055781952b10ed396de20b842f00a19e430852f7e121ad1ce91f6"
+
+[tui.model_availability_nux]
+gpt-6-astra = 2
