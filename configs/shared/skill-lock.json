@@ -261,6 +261,42 @@
       "skillFolderHash": "a56830d7e6d317c5006304a851c94f52d689d3ec",
       "installedAt": "2026-09-01T04:20:32.665Z",
       "updatedAt": "2026-09-12T08:44:03.113Z"
+    },
+    "ui-skills-root": {
+      "source": "ibelick/ui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ibelick/ui-skills.git",
+      "skillPath": "skills/ui-skills-root/SKILL.md",
+      "skillFolderHash": "c69abe581f52417464d79446834e348adffb14fb",
+      "installedAt": "2026-09-12T14:24:57.314Z",
+      "updatedAt": "2026-09-12T14:24:57.314Z"
+    },
+    "improve-ui": {
+      "source": "ibelick/ui-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/ibelick/ui-skills.git",
+      "skillPath": "skills/improve-ui/SKILL.md",
+      "skillFolderHash": "dfe1caace864e8a5db1719c4440633cd7f2f7e83",
+      "installedAt": "2026-09-12T14:25:13.238Z",
+      "updatedAt": "2026-09-12T14:25:13.238Z"
+    },
+    "improve-animations": {
+      "source": "emilkowalski/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/emilkowalski/skills.git",
+      "skillPath": "skills/improve-animations/SKILL.md",
+      "skillFolderHash": "2ff93ddb9833df45f5e83080de838bb668530820",
+      "installedAt": "2026-09-12T14:25:31.188Z",
+      "updatedAt": "2026-09-12T14:25:31.188Z"
+    },
+    "improve-react": {
+      "source": "millionco/react-doctor",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/millionco/react-doctor.git",
+      "skillPath": "skills/improve-react/SKILL.md",
+      "skillFolderHash": "0ee95f8644a7a263db14d2a7530134578f7ccf11",
+      "installedAt": "2026-09-12T14:25:53.325Z",
+      "updatedAt": "2026-09-12T14:25:53.325Z"
     }
   },
   "dismissed": {
@@ -268,14 +304,13 @@
   },
   "lastSelectedAgents": [
     "amp",
-    "antigravity",
-    "antigravity-cli",
     "cline",
     "codex",
     "cursor",
-    "deepagents",
+    "droid",
     "gemini-cli",
     "github-copilot",
+    "kilo",
     "kimi-code-cli",
     "opencode",
     "warp",

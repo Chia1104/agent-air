@@ -37,15 +37,6 @@ type = "command"
 command = '''bash '~/.codex/herdr-agent-state.sh' session'''
 timeout = 10
 
-[hooks.state]
-
-[hooks.state."~/.codex/config.toml:session_start:0:0"]
-enabled = true
-trusted_hash = "sha256:ed997f3f9766959ba56dc2243cd02468d6eadad80d92b7f5a650e6fc0fb0c050"
-
-[hooks.state."~/.codex/config.toml:session_start:1:0"]
-trusted_hash = "sha256:359d176cb8711411d1c06ac3fa4758864130624d7f00a51d94d21e3ece8aae14"
-
 [marketplaces.openai-bundled]
 source_type = "local"
 source = "~/.codex/.tmp/bundled-marketplaces/openai-bundled"
@@ -211,7 +202,7 @@ trust_level = "trusted"
 NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "028a14b6eaa6d98dac2aae00764345ab9f244801ed8493d42b9af3be5575006e,f204d340535055781952b10ed396de20b842f00a19e430852f7e121ad1ce91f6"
 
 [tui.model_availability_nux]
-gpt-6-astra = 3
+gpt-6-astra = 4
 
 # jbcontext-hook:SessionStart:start
 [[hooks.SessionStart]]
@@ -222,4 +213,16 @@ type = "command"
 command = "sh -c 'jbcontext index --silent >/dev/null 2>&1 &'"
 statusMessage = "jbcontext: kicking off background index"
 timeout = 2
+
+[hooks.state]
+
+[hooks.state."~/.codex/config.toml:session_start:0:0"]
+enabled = true
+trusted_hash = "sha256:ed997f3f9766959ba56dc2243cd02468d6eadad80d92b7f5a650e6fc0fb0c050"
+
+[hooks.state."~/.codex/config.toml:session_start:1:0"]
+trusted_hash = "sha256:359d176cb8711411d1c06ac3fa4758864130624d7f00a51d94d21e3ece8aae14"
+
+[hooks.state."~/.codex/config.toml:session_start:2:0"]
+trusted_hash = "sha256:df8f3c6790028bf4fca084ec8bf199aff51e2979f34b5312cf41ee522b4b4bc9"
 # jbcontext-hook:SessionStart:end

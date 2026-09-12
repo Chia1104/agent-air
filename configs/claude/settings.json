@@ -126,5 +126,8 @@
   "tui": "fullscreen",
   "theme": "auto",
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true
+  "agentPushNotifEnabled": true,
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-opus-5"
+  }
 }
