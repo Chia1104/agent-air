@@ -6,18 +6,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel/turborepo.git",
       "skillPath": "skills/turborepo/SKILL.md",
-      "skillFolderHash": "34eaa69f05167f1e1a809c131547a80b83bf8208",
+      "skillFolderHash": "c79a3a95d0a3b441a49400ec2c45cb03e9514e91",
       "installedAt": "2026-01-23T08:11:04.624Z",
-      "updatedAt": "2026-08-30T18:23:50.893Z"
+      "updatedAt": "2026-09-12T08:41:58.794Z"
     },
     "frontend-testing": {
       "source": "langgenius/dify",
       "sourceType": "github",
       "sourceUrl": "https://github.com/langgenius/dify.git",
       "skillPath": ".agents/skills/frontend-testing/SKILL.md",
-      "skillFolderHash": "df581be5917112fcb45761d9a47837ec5440304c",
+      "skillFolderHash": "7d81db4db0e23c4c99f2b5536014a8769733288e",
       "installedAt": "2026-01-24T11:35:31.622Z",
-      "updatedAt": "2026-08-30T18:24:18.741Z"
+      "updatedAt": "2026-09-12T08:42:29.486Z"
     },
     "threejs-shaders": {
       "source": "cloudai-x/threejs-skills",
@@ -51,9 +51,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/frontend-design/SKILL.md",
-      "skillFolderHash": "0d5b74a14bdf3ebcd64f352d06376a2ef05ed296",
+      "skillFolderHash": "d79e2a5bb4df4a386c2adcdd9ab8709bba28c3f6",
       "installedAt": "2026-01-25T10:35:38.947Z",
-      "updatedAt": "2026-08-01T19:39:51.506Z"
+      "updatedAt": "2026-09-12T08:42:32.289Z"
     },
     "agent-browser": {
       "source": "vercel-labs/agent-browser",
@@ -69,9 +69,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/better-auth/skills.git",
       "skillPath": "better-auth/best-practices/SKILL.md",
-      "skillFolderHash": "2ab82b0b744f426903e321f4abcf0440c6e201ca",
+      "skillFolderHash": "2ed2719690a27752d6a01014ff217d9e3d120e43",
       "installedAt": "2026-01-25T10:36:25.898Z",
-      "updatedAt": "2026-08-01T19:39:54.959Z"
+      "updatedAt": "2026-09-12T08:42:34.175Z"
     },
     "heroui-react": {
       "source": "heroui-inc/heroui",
@@ -96,9 +96,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/lobehub/lobe-chat.git",
       "skillPath": ".agents/skills/zustand/SKILL.md",
-      "skillFolderHash": "0c33dc29f09a63994592fe5b4105b1fd1f971580",
+      "skillFolderHash": "829e8ce163bcd9d1bcaec22ddc99eeeed92361e2",
       "installedAt": "2026-01-28T08:36:28.414Z",
-      "updatedAt": "2026-08-08T16:19:11.632Z"
+      "updatedAt": "2026-09-12T08:42:49.067Z"
     },
     "heroui-native": {
       "source": "heroui-inc/heroui",
@@ -123,9 +123,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/lobehub/lobehub.git",
       "skillPath": ".agents/skills/typescript/SKILL.md",
-      "skillFolderHash": "995342808d584bcb64eecc875c2603167e4839d6",
+      "skillFolderHash": "6aac578de89f3b903721ace97ac604e298ed9d87",
       "installedAt": "2026-02-11T02:27:39.167Z",
-      "updatedAt": "2026-08-01T19:40:12.366Z"
+      "updatedAt": "2026-09-12T08:43:05.204Z"
     },
     "npm-deps-cleanup": {
       "source": "anthonyshew/dotfiles",
@@ -150,90 +150,90 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/railwayapp/railway-skills.git",
       "skillPath": "plugins/railway/skills/use-railway/SKILL.md",
-      "skillFolderHash": "bb3efd4b3dc2f5e1c23782d0ecc6bac0280800ca",
+      "skillFolderHash": "ec9300171752759af77000437a3c64dada6b6d79",
       "installedAt": "2026-07-13T13:26:30.565Z",
-      "updatedAt": "2026-08-08T16:19:14.051Z"
+      "updatedAt": "2026-09-12T08:43:08.403Z"
     },
     "workflow": {
       "source": "vercel/workflow",
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel/workflow.git",
       "skillPath": "skills/workflow/SKILL.md",
-      "skillFolderHash": "60e4adade3fddca3107bddec4b1820d2c36b5765",
+      "skillFolderHash": "11b695fc9bc07798a59b291fee29ac1120d28f00",
       "installedAt": "2026-07-14T07:15:16.583Z",
-      "updatedAt": "2026-08-30T18:24:23.232Z"
+      "updatedAt": "2026-09-12T08:43:11.039Z"
     },
     "security-audit": {
       "source": "cloudflare/security-audit-skill",
       "sourceType": "github",
       "sourceUrl": "https://github.com/cloudflare/security-audit-skill.git",
       "skillPath": "skills/security-audit/SKILL.md",
-      "skillFolderHash": "bf8273f4614739db4c8535a5ab43f3a471b974b8",
+      "skillFolderHash": "ad987de538e528a3e57b057018a662b7cbdac180",
       "installedAt": "2026-07-21T06:33:13.599Z",
-      "updatedAt": "2026-07-21T06:33:13.599Z"
+      "updatedAt": "2026-09-12T08:43:13.139Z"
     },
     "i-have-adhd": {
       "source": "ayghri/i-have-adhd",
       "sourceType": "github",
       "sourceUrl": "https://github.com/ayghri/i-have-adhd.git",
       "skillPath": "skills/i-have-adhd/SKILL.md",
-      "skillFolderHash": "871e88cbe9b167670c170c53c8173c68609a2ae9",
+      "skillFolderHash": "72dc6e3e9d0f8d906579a235edb7b2a402d7b8e1",
       "installedAt": "2026-07-21T10:14:45.891Z",
-      "updatedAt": "2026-08-13T02:19:55.792Z"
+      "updatedAt": "2026-09-12T08:43:15.052Z"
     },
     "no-ai-slop": {
       "source": "petergyang/no-ai-slop",
       "sourceType": "github",
       "sourceUrl": "https://github.com/petergyang/no-ai-slop.git",
       "skillPath": "skills/no-ai-slop/SKILL.md",
-      "skillFolderHash": "ff5d481dea0e60cea3738f81ca737ad54328b267",
+      "skillFolderHash": "3d8be37cd59f6601cbc33676ecaf5b42865daf63",
       "installedAt": "2026-08-08T16:17:48.447Z",
-      "updatedAt": "2026-08-08T16:17:48.447Z"
+      "updatedAt": "2026-09-12T08:43:16.968Z"
     },
     "orca-cli": {
       "source": "stablyai/orca",
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/orca-cli/SKILL.md",
-      "skillFolderHash": "ee3a35c76f875ea6ebaf68947af13ba6346b13f2",
+      "skillFolderHash": "0c90a5b8b422a93ca806af6df3b65445ab5b2072",
       "installedAt": "2026-08-13T03:10:14.633Z",
-      "updatedAt": "2026-08-17T06:54:33.659Z"
+      "updatedAt": "2026-09-12T08:43:33.262Z"
     },
     "orchestration": {
       "source": "stablyai/orca",
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/orchestration/SKILL.md",
-      "skillFolderHash": "9aa26fde93c0592e5983cdca1ccd33b402802255",
+      "skillFolderHash": "ebd864919dd8cab9d7049fc624c9afeebce2767c",
       "installedAt": "2026-08-13T03:10:14.635Z",
-      "updatedAt": "2026-08-13T03:10:14.635Z"
+      "updatedAt": "2026-09-12T08:43:49.804Z"
     },
     "install-anti-slop": {
       "source": "dmmulroy/anti-slop",
       "sourceType": "github",
       "sourceUrl": "https://github.com/dmmulroy/anti-slop.git",
       "skillPath": "skills/install-anti-slop/SKILL.md",
-      "skillFolderHash": "31c294c983ea89bc585041cb43ec651b2df684a1",
+      "skillFolderHash": "89044d21c75a367eac1ddbaf208e650b1a7d5820",
       "installedAt": "2026-08-17T06:54:04.506Z",
-      "updatedAt": "2026-08-30T18:24:25.602Z"
+      "updatedAt": "2026-09-12T08:43:52.707Z"
     },
     "vgpu": {
       "source": "vercel-labs/vgpu",
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/vgpu.git",
       "skillPath": "skills/vgpu/SKILL.md",
-      "skillFolderHash": "8017d02851f8d9b294027dd73eeba8994affd149",
+      "skillFolderHash": "96b531f8d13cc5c3df08b2bb1ecd0200e66c3948",
       "installedAt": "2026-08-30T18:22:23.969Z",
-      "updatedAt": "2026-08-30T18:22:23.969Z"
+      "updatedAt": "2026-09-12T08:43:54.637Z"
     },
     "orpc": {
       "source": "middleapi/orpc",
       "sourceType": "github",
       "sourceUrl": "https://github.com/middleapi/orpc.git",
       "skillPath": "skills/orpc/SKILL.md",
-      "skillFolderHash": "47d8f19d0a1147e1b879e4ef719f9c1bca3af65b",
+      "skillFolderHash": "6c4b4526d7526aafde51394fed59f7baf6d7b2c8",
       "installedAt": "2026-09-01T04:20:32.659Z",
-      "updatedAt": "2026-09-01T04:20:32.659Z"
+      "updatedAt": "2026-09-12T08:43:57.210Z"
     },
     "orpc-contract": {
       "source": "middleapi/orpc",
@@ -249,18 +249,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/middleapi/orpc.git",
       "skillPath": "skills/orpc-migrate/SKILL.md",
-      "skillFolderHash": "53de321d96e63c96a499de89d735b86c3d8a84fd",
+      "skillFolderHash": "68fdee41a95d71b7b1f964e3588376c87b6d8ce6",
       "installedAt": "2026-09-01T04:20:32.663Z",
-      "updatedAt": "2026-09-01T04:20:32.663Z"
+      "updatedAt": "2026-09-12T08:44:00.198Z"
     },
     "orpc-openapi": {
       "source": "middleapi/orpc",
       "sourceType": "github",
       "sourceUrl": "https://github.com/middleapi/orpc.git",
       "skillPath": "skills/orpc-openapi/SKILL.md",
-      "skillFolderHash": "e34db7b795712a9d37c1d17b92472cc7ec9bba3e",
+      "skillFolderHash": "a56830d7e6d317c5006304a851c94f52d689d3ec",
       "installedAt": "2026-09-01T04:20:32.665Z",
-      "updatedAt": "2026-09-01T04:20:32.665Z"
+      "updatedAt": "2026-09-12T08:44:03.113Z"
     }
   },
   "dismissed": {

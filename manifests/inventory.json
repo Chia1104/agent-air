@@ -1,7 +1,8 @@
 {
   "skills": {
     "claude": [
-      "codebase-memory"
+      "codebase-memory",
+      "context-search"
     ],
     "codex": [
       "hatch-pet"
@@ -83,8 +84,10 @@
       "pretext",
       "product-price-monitor",
       "python-debugpy",
+      "reddit-reading",
       "requesting-code-review",
       "research-paper-writing",
+      "rss-feeds",
       "scheduled-briefing-operations",
       "sdlc-review",
       "segment-anything-model",
@@ -214,10 +217,16 @@
         "no-ai-slop",
         "npm-deps-cleanup",
         "orca-cli",
+        "orchestration",
+        "orpc",
+        "orpc-migrate",
+        "orpc-openapi",
+        "security-audit",
         "turborepo",
         "typescript",
         "use-railway",
         "vercel-react-best-practices",
+        "vgpu",
         "vitest",
         "workflow",
         "zustand"
@@ -227,9 +236,9 @@
       "local": [
         "aside-browser",
         "codebase-memory",
+        "context-search",
         "design-md",
         "heroui-native",
-        "security-audit",
         "supacode-cli",
         "supacode-deeplinks"
       ],
@@ -250,6 +259,7 @@
         "orpc-contract",
         "orpc-migrate",
         "orpc-openapi",
+        "security-audit",
         "threejs-shaders",
         "turborepo",
         "typescript",
@@ -279,6 +289,7 @@
     },
     "cursor": {
       "local": [
+        "aside-browser",
         "use-railway"
       ],
       "symlinked": []
