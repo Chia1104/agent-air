@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel/turborepo.git",
       "skillPath": "skills/turborepo/SKILL.md",
-      "skillFolderHash": "c79a3a95d0a3b441a49400ec2c45cb03e9514e91",
+      "skillFolderHash": "07e425939cf7c89ecd6496370231161c1b4c9269",
       "installedAt": "2026-01-23T08:11:04.624Z",
-      "updatedAt": "2026-09-12T08:41:58.794Z"
+      "updatedAt": "2026-09-18T19:48:06.421Z"
     },
     "frontend-testing": {
       "source": "langgenius/dify",
@@ -168,9 +168,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/cloudflare/security-audit-skill.git",
       "skillPath": "skills/security-audit/SKILL.md",
-      "skillFolderHash": "ad987de538e528a3e57b057018a662b7cbdac180",
+      "skillFolderHash": "ccbc33ed119b28c3ef7b44a7e2081ab191ad63af",
       "installedAt": "2026-07-21T06:33:13.599Z",
-      "updatedAt": "2026-09-12T08:43:13.139Z"
+      "updatedAt": "2026-09-18T19:48:08.508Z"
     },
     "i-have-adhd": {
       "source": "ayghri/i-have-adhd",
@@ -195,18 +195,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/orca-cli/SKILL.md",
-      "skillFolderHash": "0c90a5b8b422a93ca806af6df3b65445ab5b2072",
+      "skillFolderHash": "ae1a86f92d7bf38f4dc161cc0c57e15a74f54832",
       "installedAt": "2026-08-13T03:10:14.633Z",
-      "updatedAt": "2026-09-12T08:43:33.262Z"
+      "updatedAt": "2026-09-18T19:48:25.497Z"
     },
     "orchestration": {
       "source": "stablyai/orca",
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/orchestration/SKILL.md",
-      "skillFolderHash": "ebd864919dd8cab9d7049fc624c9afeebce2767c",
+      "skillFolderHash": "23bc2ff6bb9f6e7d17f41734709ac951dbe3ee80",
       "installedAt": "2026-08-13T03:10:14.635Z",
-      "updatedAt": "2026-09-12T08:43:49.804Z"
+      "updatedAt": "2026-09-18T19:48:38.791Z"
     },
     "install-anti-slop": {
       "source": "dmmulroy/anti-slop",
@@ -231,9 +231,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/middleapi/orpc.git",
       "skillPath": "skills/orpc/SKILL.md",
-      "skillFolderHash": "6c4b4526d7526aafde51394fed59f7baf6d7b2c8",
+      "skillFolderHash": "b3927100749d0eefe216f24bbce3b64ec2520451",
       "installedAt": "2026-09-01T04:20:32.659Z",
-      "updatedAt": "2026-09-12T08:43:57.210Z"
+      "updatedAt": "2026-09-18T19:48:42.061Z"
     },
     "orpc-contract": {
       "source": "middleapi/orpc",
@@ -249,9 +249,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/middleapi/orpc.git",
       "skillPath": "skills/orpc-migrate/SKILL.md",
-      "skillFolderHash": "68fdee41a95d71b7b1f964e3588376c87b6d8ce6",
+      "skillFolderHash": "950c8b922dfa1385e7bfa0ca3933812269e8d7d9",
       "installedAt": "2026-09-01T04:20:32.663Z",
-      "updatedAt": "2026-09-12T08:44:00.198Z"
+      "updatedAt": "2026-09-18T19:48:44.908Z"
     },
     "orpc-openapi": {
       "source": "middleapi/orpc",
@@ -285,9 +285,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/emilkowalski/skills.git",
       "skillPath": "skills/improve-animations/SKILL.md",
-      "skillFolderHash": "2ff93ddb9833df45f5e83080de838bb668530820",
+      "skillFolderHash": "cf1f7aabac34c08f2cf833f039fa99af2f415183",
       "installedAt": "2026-09-12T14:25:31.188Z",
-      "updatedAt": "2026-09-12T14:25:31.188Z"
+      "updatedAt": "2026-09-18T19:48:46.897Z"
     },
     "improve-react": {
       "source": "millionco/react-doctor",

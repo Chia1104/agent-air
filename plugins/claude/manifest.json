@@ -9,6 +9,13 @@
       "enabled": true
     },
     {
+      "id": "brag@brag",
+      "scope": "user",
+      "version": "0.2.2",
+      "gitCommitSha": "1e2df63ffe4e5225c413271704a324eea6ec6c66",
+      "enabled": true
+    },
+    {
       "id": "cloudflare@claude-plugins-official",
       "scope": "user",
       "version": "1.0.0",
@@ -25,13 +32,14 @@
     {
       "id": "context7@claude-plugins-official",
       "scope": "user",
-      "version": "3deb821cb71c",
+      "version": "c447c3207a42",
+      "gitCommitSha": "c447c3207a425bc4e2a0d068435f64b0477ae981",
       "enabled": true
     },
     {
       "id": "figma@claude-plugins-official",
       "scope": "user",
-      "version": "2.2.108",
+      "version": "2.2.111",
       "gitCommitSha": "2efd0e37d10c35c4a7cf6d2b7381c9dc1a569bd4",
       "enabled": false
     },
@@ -57,6 +65,13 @@
     }
   ],
   "marketplaces": [
+    {
+      "name": "brag",
+      "source": {
+        "source": "github",
+        "repo": "latent-spaces/brag"
+      }
+    },
     {
       "name": "claude-code-warp",
       "source": {

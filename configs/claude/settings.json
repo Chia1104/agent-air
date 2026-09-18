@@ -1,4 +1,7 @@
 {
+  "env": {
+    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-opus-5"
+  },
   "permissions": {
     "defaultMode": "auto"
   },
@@ -95,7 +98,8 @@
     "typescript-lsp@claude-plugins-official": true,
     "warp@claude-code-warp": true,
     "auth@himself65-auth-spec": true,
-    "cloudflare@claude-plugins-official": true
+    "cloudflare@claude-plugins-official": true,
+    "brag@brag": true
   },
   "extraKnownMarketplaces": {
     "claude-code-warp": {
@@ -115,6 +119,12 @@
         "source": "github",
         "repo": "cloudflare/skills"
       }
+    },
+    "brag": {
+      "source": {
+        "source": "github",
+        "repo": "latent-spaces/brag"
+      }
     }
   },
   "effortLevel": "high",
@@ -123,11 +133,15 @@
       "effortLevel": "high"
     }
   },
+  "pluginConfigs": {
+    "agents-md@builtin": {
+      "options": {
+        "instructionFiles": "claude-md-and-agents-md"
+      }
+    }
+  },
   "tui": "fullscreen",
   "theme": "auto",
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
-  "env": {
-    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-opus-5"
-  }
+  "agentPushNotifEnabled": true
 }
