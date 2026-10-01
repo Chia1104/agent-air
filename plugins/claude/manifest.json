@@ -2,6 +2,13 @@
   "schemaVersion": 1,
   "plugins": [
     {
+      "id": "atlassian@claude-plugins-official",
+      "scope": "user",
+      "version": "eb9a5956a7ac",
+      "gitCommitSha": "eb9a5956a7ac6380c731c725a8382da53ad6d980",
+      "enabled": true
+    },
+    {
       "id": "auth@himself65-auth-spec",
       "scope": "user",
       "version": "6.0.0",
@@ -32,15 +39,15 @@
     {
       "id": "context7@claude-plugins-official",
       "scope": "user",
-      "version": "c447c3207a42",
-      "gitCommitSha": "c447c3207a425bc4e2a0d068435f64b0477ae981",
+      "version": "ab024cdcfa7c",
+      "gitCommitSha": "ab024cdcfa7ca80be204acd4907656ba5a968589",
       "enabled": true
     },
     {
       "id": "figma@claude-plugins-official",
       "scope": "user",
-      "version": "2.2.111",
-      "gitCommitSha": "2efd0e37d10c35c4a7cf6d2b7381c9dc1a569bd4",
+      "version": "2.2.120",
+      "gitCommitSha": "172920731eedf414e9b22ae60017d9a5b6c9f81f",
       "enabled": false
     },
     {
@@ -48,6 +55,20 @@
       "scope": "user",
       "version": "1.2.3",
       "gitCommitSha": "ed37663cc5fbef691ddfecd080dff42f7e7e350d",
+      "enabled": true
+    },
+    {
+      "id": "tanstack-ai@tanstack-ai",
+      "scope": "user",
+      "version": "0.1.0",
+      "gitCommitSha": "7404539c55acf9d7d0b0f7ccb2f16f4dcd75acdb",
+      "enabled": true
+    },
+    {
+      "id": "typesafe@typesafe-ai",
+      "scope": "user",
+      "version": "0.5.7",
+      "gitCommitSha": "65a39f393687675ce170e6094757de20370365b9",
       "enabled": true
     },
     {
@@ -105,6 +126,20 @@
       "source": {
         "source": "github",
         "repo": "openai/codex-plugin-cc"
+      }
+    },
+    {
+      "name": "tanstack-ai",
+      "source": {
+        "source": "github",
+        "repo": "TanStack/ai"
+      }
+    },
+    {
+      "name": "typesafe-ai",
+      "source": {
+        "source": "github",
+        "repo": "typesafe-ai/skills"
       }
     }
   ]

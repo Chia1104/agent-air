@@ -1,11 +1,8 @@
 {
-  "env": {
-    "CLAUDE_CODE_SUBAGENT_MODEL": "claude-opus-5"
-  },
+  "env": {},
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5-1[1m]",
   "hooks": {
     "PreToolUse": [
       {
@@ -71,7 +68,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.jbcontext/bin/jbcontext_binary index --silent",
+            "command": "~/.jbcontext/bin/jbcontext_binary index --silent --only-incremental",
             "async": true
           }
         ]
@@ -83,7 +80,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.jbcontext/bin/jbcontext_binary index --silent",
+            "command": "~/.jbcontext/bin/jbcontext_binary index --silent --only-incremental",
             "async": true
           }
         ]
@@ -99,7 +96,10 @@
     "warp@claude-code-warp": true,
     "auth@himself65-auth-spec": true,
     "cloudflare@claude-plugins-official": true,
-    "brag@brag": true
+    "brag@brag": true,
+    "typesafe@typesafe-ai": true,
+    "atlassian@claude-plugins-official": true,
+    "tanstack-ai@tanstack-ai": true
   },
   "extraKnownMarketplaces": {
     "claude-code-warp": {
@@ -125,12 +125,27 @@
         "source": "github",
         "repo": "latent-spaces/brag"
       }
+    },
+    "typesafe-ai": {
+      "source": {
+        "source": "github",
+        "repo": "typesafe-ai/skills"
+      }
+    },
+    "tanstack-ai": {
+      "source": {
+        "source": "github",
+        "repo": "TanStack/ai"
+      }
     }
   },
   "effortLevel": "high",
   "modelSettings": {
     "claude-fable-5": {
       "effortLevel": "high"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "xhigh"
     }
   },
   "pluginConfigs": {

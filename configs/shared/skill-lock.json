@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel/turborepo.git",
       "skillPath": "skills/turborepo/SKILL.md",
-      "skillFolderHash": "07e425939cf7c89ecd6496370231161c1b4c9269",
+      "skillFolderHash": "a1bae26a81bbc79e6eb14b4e7ec4d36694e6e94a",
       "installedAt": "2026-01-23T08:11:04.624Z",
-      "updatedAt": "2026-09-18T19:48:06.421Z"
+      "updatedAt": "2026-10-01T17:02:42.349Z"
     },
     "frontend-testing": {
       "source": "langgenius/dify",
@@ -114,18 +114,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/antfu/skills.git",
       "skillPath": "skills/vitest/SKILL.md",
-      "skillFolderHash": "6e59e3b95305499c21fc401b3dbddedbb8ead8a6",
+      "skillFolderHash": "0ed74afc98af8324843b8514184c43cd6d6411ef",
       "installedAt": "2026-01-31T13:02:49.643Z",
-      "updatedAt": "2026-08-01T19:39:59.862Z"
+      "updatedAt": "2026-10-01T17:02:44.200Z"
     },
     "typescript": {
       "source": "lobehub/lobehub",
       "sourceType": "github",
       "sourceUrl": "https://github.com/lobehub/lobehub.git",
       "skillPath": ".agents/skills/typescript/SKILL.md",
-      "skillFolderHash": "6aac578de89f3b903721ace97ac604e298ed9d87",
+      "skillFolderHash": "4393ed355e1b8ef69a3f8ecbd4b455761bcaeab2",
       "installedAt": "2026-02-11T02:27:39.167Z",
-      "updatedAt": "2026-09-12T08:43:05.204Z"
+      "updatedAt": "2026-10-01T17:02:56.141Z"
     },
     "npm-deps-cleanup": {
       "source": "anthonyshew/dotfiles",
@@ -150,18 +150,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/railwayapp/railway-skills.git",
       "skillPath": "plugins/railway/skills/use-railway/SKILL.md",
-      "skillFolderHash": "ec9300171752759af77000437a3c64dada6b6d79",
+      "skillFolderHash": "57dda359e3a86cdc156621f1d46a92f2a9494fab",
       "installedAt": "2026-07-13T13:26:30.565Z",
-      "updatedAt": "2026-09-12T08:43:08.403Z"
+      "updatedAt": "2026-10-01T17:02:58.505Z"
     },
     "workflow": {
       "source": "vercel/workflow",
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel/workflow.git",
       "skillPath": "skills/workflow/SKILL.md",
-      "skillFolderHash": "11b695fc9bc07798a59b291fee29ac1120d28f00",
+      "skillFolderHash": "93672b9cc00ab2ab2bff1cf044e5281223a4ad30",
       "installedAt": "2026-07-14T07:15:16.583Z",
-      "updatedAt": "2026-09-12T08:43:11.039Z"
+      "updatedAt": "2026-10-01T17:03:00.177Z"
     },
     "security-audit": {
       "source": "cloudflare/security-audit-skill",
@@ -190,24 +190,6 @@
       "installedAt": "2026-08-08T16:17:48.447Z",
       "updatedAt": "2026-09-12T08:43:16.968Z"
     },
-    "orca-cli": {
-      "source": "stablyai/orca",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/stablyai/orca.git",
-      "skillPath": "skills/orca-cli/SKILL.md",
-      "skillFolderHash": "ae1a86f92d7bf38f4dc161cc0c57e15a74f54832",
-      "installedAt": "2026-08-13T03:10:14.633Z",
-      "updatedAt": "2026-09-18T19:48:25.497Z"
-    },
-    "orchestration": {
-      "source": "stablyai/orca",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/stablyai/orca.git",
-      "skillPath": "skills/orchestration/SKILL.md",
-      "skillFolderHash": "23bc2ff6bb9f6e7d17f41734709ac951dbe3ee80",
-      "installedAt": "2026-08-13T03:10:14.635Z",
-      "updatedAt": "2026-09-18T19:48:38.791Z"
-    },
     "install-anti-slop": {
       "source": "dmmulroy/anti-slop",
       "sourceType": "github",
@@ -222,9 +204,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/vgpu.git",
       "skillPath": "skills/vgpu/SKILL.md",
-      "skillFolderHash": "96b531f8d13cc5c3df08b2bb1ecd0200e66c3948",
+      "skillFolderHash": "671071f08626dd31e1bd45a5fe1b6edeb99d2159",
       "installedAt": "2026-08-30T18:22:23.969Z",
-      "updatedAt": "2026-09-12T08:43:54.637Z"
+      "updatedAt": "2026-10-01T17:03:02.021Z"
     },
     "orpc": {
       "source": "middleapi/orpc",
@@ -297,6 +279,24 @@
       "skillFolderHash": "0ee95f8644a7a263db14d2a7530134578f7ccf11",
       "installedAt": "2026-09-12T14:25:53.325Z",
       "updatedAt": "2026-09-12T14:25:53.325Z"
+    },
+    "typescript-best-practices": {
+      "source": "cursor/plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/cursor/plugins.git",
+      "skillPath": "pstack/skills/typescript-best-practices/SKILL.md",
+      "skillFolderHash": "924cb1d5fee20dc4028a10bf98b26dec8cbdfd83",
+      "installedAt": "2026-09-24T11:55:08.854Z",
+      "updatedAt": "2026-09-24T11:55:08.854Z"
+    },
+    "seo-audit": {
+      "source": "anthropics/knowledge-work-plugins",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "skillPath": "marketing/skills/seo-audit/SKILL.md",
+      "skillFolderHash": "a0129025295909bd28ef7468a5b88a5ec9f1724a",
+      "installedAt": "2026-09-27T13:08:09.693Z",
+      "updatedAt": "2026-09-27T13:08:09.693Z"
     }
   },
   "dismissed": {

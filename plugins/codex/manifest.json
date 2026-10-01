@@ -23,6 +23,13 @@
       "managed": true
     },
     {
+      "id": "atlassian@claude-plugins-official",
+      "version": "1.0.0",
+      "enabled": true,
+      "marketplace": "claude-plugins-official",
+      "managed": false
+    },
+    {
       "id": "auth@plugins-cli",
       "version": "5.0.0",
       "enabled": true,
@@ -30,11 +37,25 @@
       "managed": false
     },
     {
+      "id": "brag@brag",
+      "version": "0.4.0",
+      "enabled": true,
+      "marketplace": "brag",
+      "managed": false
+    },
+    {
       "id": "browser@openai-bundled",
-      "version": "26.908.70816",
+      "version": "26.928.31416",
       "enabled": true,
       "marketplace": "openai-bundled",
       "managed": true
+    },
+    {
+      "id": "cloudflare@claude-plugins-official",
+      "version": "1.0.0",
+      "enabled": true,
+      "marketplace": "claude-plugins-official",
+      "managed": false
     },
     {
       "id": "cloudflare@openai-curated-remote",
@@ -44,25 +65,60 @@
       "managed": true
     },
     {
+      "id": "code-review@openai-bundled",
+      "version": "26.928.31416",
+      "enabled": true,
+      "marketplace": "openai-bundled",
+      "managed": true
+    },
+    {
       "id": "codex-app-tools@openai-bundled",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "enabled": true,
       "marketplace": "openai-bundled",
       "managed": true
     },
     {
       "id": "codex-security@openai-curated-remote",
-      "version": "0.1.24",
+      "version": "0.1.31",
       "enabled": true,
       "marketplace": "openai-curated-remote",
       "managed": true
     },
     {
+      "id": "codex@openai-codex",
+      "version": "1.0.6",
+      "enabled": true,
+      "marketplace": "openai-codex",
+      "managed": true
+    },
+    {
       "id": "computer-use@openai-bundled",
-      "version": "1.0.1001067",
+      "version": "1.0.1001281",
       "enabled": true,
       "marketplace": "openai-bundled",
       "managed": true
+    },
+    {
+      "id": "context7@claude-plugins-official",
+      "version": "local",
+      "enabled": true,
+      "marketplace": "claude-plugins-official",
+      "managed": false
+    },
+    {
+      "id": "cowork-plugin-management@claude-cowork",
+      "version": "0.2.2",
+      "enabled": true,
+      "marketplace": "claude-cowork",
+      "managed": false
+    },
+    {
+      "id": "design@claude-cowork",
+      "version": "1.2.0",
+      "enabled": true,
+      "marketplace": "claude-cowork",
+      "managed": false
     },
     {
       "id": "documents@openai-primary-runtime",
@@ -72,8 +128,15 @@
       "managed": true
     },
     {
+      "id": "engineering@claude-cowork",
+      "version": "1.2.0",
+      "enabled": true,
+      "marketplace": "claude-cowork",
+      "managed": false
+    },
+    {
       "id": "figma@openai-curated-remote",
-      "version": "11.0.0",
+      "version": "15.0.0",
       "enabled": true,
       "marketplace": "openai-curated-remote",
       "managed": true
@@ -100,8 +163,15 @@
       "managed": true
     },
     {
+      "id": "mattpocock-skills@claude-plugins-official",
+      "version": "1.2.3",
+      "enabled": true,
+      "marketplace": "claude-plugins-official",
+      "managed": false
+    },
+    {
       "id": "openai-developers@openai-curated-remote",
-      "version": "1.3.0",
+      "version": "1.3.6",
       "enabled": true,
       "marketplace": "openai-curated-remote",
       "managed": true
@@ -142,15 +212,8 @@
       "managed": true
     },
     {
-      "id": "sites@openai-bundled",
-      "version": "0.1.66",
-      "enabled": true,
-      "marketplace": "openai-bundled",
-      "managed": true
-    },
-    {
       "id": "sites@openai-curated-remote",
-      "version": "0.1.65",
+      "version": "0.1.75",
       "enabled": true,
       "marketplace": "openai-curated-remote",
       "managed": true
@@ -163,6 +226,13 @@
       "managed": true
     },
     {
+      "id": "tanstack-ai@tanstack-ai",
+      "version": "0.1.0",
+      "enabled": true,
+      "marketplace": "tanstack-ai",
+      "managed": false
+    },
+    {
       "id": "template-creator@openai-primary-runtime",
       "version": "26.909.12148",
       "enabled": true,
@@ -170,8 +240,22 @@
       "managed": true
     },
     {
+      "id": "typesafe@typesafe-ai",
+      "version": "0.5.7",
+      "enabled": true,
+      "marketplace": "typesafe-ai",
+      "managed": false
+    },
+    {
+      "id": "typescript-lsp@claude-plugins-official",
+      "version": "1.0.0",
+      "enabled": true,
+      "marketplace": "claude-plugins-official",
+      "managed": false
+    },
+    {
       "id": "unified-computer-use@openai-bundled",
-      "version": "26.908.70816",
+      "version": "26.928.31416",
       "enabled": true,
       "marketplace": "openai-bundled",
       "managed": true
@@ -185,9 +269,23 @@
     },
     {
       "id": "visualize@openai-bundled",
-      "version": "1.0.37",
+      "version": "1.0.45",
       "enabled": true,
       "marketplace": "openai-bundled",
+      "managed": true
+    },
+    {
+      "id": "warp@claude-code-warp",
+      "version": "2.2.0",
+      "enabled": true,
+      "marketplace": "claude-code-warp",
+      "managed": false
+    },
+    {
+      "id": "work-pets@openai-curated-remote",
+      "version": "0.1.6",
+      "enabled": true,
+      "marketplace": "openai-curated-remote",
       "managed": true
     }
   ]
